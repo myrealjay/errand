@@ -31,6 +31,12 @@
             </li>
             <li class="breadcrumb-item active">Overview</li>
           </ol>
+          <ol class="breadcrumb" style="display:{{ Request::is('customer/update*') ? '' : 'none' }}">
+            <li class="breadcrumb-item">
+              <a href="{{url('/customer/update')}}"> Update Your Profile </a>
+            </li>
+            <li class="breadcrumb-item active">Overview</li>
+          </ol>
 
           <!-- Icon Cards-->
           <!-- <div class="row">

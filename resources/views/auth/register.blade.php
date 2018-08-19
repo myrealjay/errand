@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ozi App | Registration Page</title>
+    <title>errandPro | Registration Page</title>
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -34,7 +34,7 @@
 <body class="hold-transition register-page">
 <div class="register-box">
     <div class="register-logo">
-        <a href="{{ url('/home') }}"><b>Ozi </b>App</a>
+        <a href="{{ url('/home') }}"><b>errand </b>Pro</a>
     </div>
 
     <div class="register-box-body">
@@ -44,16 +44,40 @@
 
             {!! csrf_field() !!}
 
-            <div class="form-group has-feedback{{ $errors->has('name') ? ' has-error' : '' }}">
-                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Full Name">
+            <div class="form-group has-feedback{{ $errors->has('f_name') ? ' has-error' : '' }}">
+                <input type="text" class="form-control" name="f_name" value="{{ old('f_name') }}" placeholder="First Name">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
 
-                @if ($errors->has('name'))
+                @if ($errors->has('f_name'))
                     <span class="help-block">
-                        <strong>{{ $errors->first('name') }}</strong>
+                        <strong>{{ $errors->first('f_name') }}</strong>
                     </span>
                 @endif
             </div>
+
+            <div class="form-group has-feedback{{ $errors->has('l_name') ? ' has-error' : '' }}">
+                <input type="text" class="form-control" name="l_name" value="{{ old('l_name') }}" placeholder="Last Name">
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+
+                @if ($errors->has('l_name'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('l_name') }}</strong>
+                    </span>
+                @endif
+            </div>
+
+            <div class="form-group has-feedback{{ $errors->has('phone_no') ? ' has-error' : '' }}">
+                <input type="text" class="form-control" name="phone_no" value="{{ old('phone_no') }}" placeholder="Phone Number">
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+
+                @if ($errors->has('phone_no'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('phone_no') }}</strong>
+                    </span>
+                @endif
+            </div>
+
+            <input type="hidden" name="role" value="0">
 
             <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
                 <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">

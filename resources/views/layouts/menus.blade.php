@@ -22,6 +22,12 @@
     <span> Your Errand Logs</span>
   </a>
 </li>
+<li class="nav-item {{ Request::is('customer/update*') ? 'active' : '' }}">
+  <a class="nav-link" href="{{url('customer/update')}}">
+    <i class="fas fa-fw fa-book"></i>
+    <span> Update Your Profile</span>
+  </a>
+</li>
 
 
 

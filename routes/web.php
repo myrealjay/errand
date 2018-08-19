@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('enter');
 });
 
 
@@ -28,16 +28,26 @@ Route::get('/customer/register', 'CustomersAuthController@getRegister');
 
 Route::post('/customer/register', 'CustomersAuthController@postRegister');
 
-Route::get('/dashboard','CustomerinfoController@dashboard')->name('dashboard');
+Route::get('/dashboard','CustomersFrontController@dashboard')->name('dashboard');
 
-Route::post('/customer-logout','CustomerinfoController@logout')->name('customer-logout');
+Route::post('/customer-logout','CustomersFrontController@logout')->name('customer-logout');
 
-Route::get('/customer-logout','CustomerinfoController@logout')->name('customer-logout');
+Route::get('/customer-logout','CustomersFrontController@logout')->name('customer-logout');
 
-Route::get('/customer/request','CustomerinfoController@getRequest');
+Route::get('/customer/request','CustomersFrontController@getRequest');
 
-Route::post('/customer/request','CustomerinfoController@postRequest');
+Route::post('/customer/request','CustomersFrontController@postRequest');
 
-Route::get('/customer/logs','CustomerinfoController@logs');
+Route::get('/customer/logs','CustomersFrontController@logs');
 
-Route::get('/customer/track','CustomerinfoController@track');
+Route::get('/customer/track','CustomersFrontController@track');
+
+Route::get('/customer/update','CustomersFrontController@update');
+
+Route::post('/customer/update','CustomersFrontController@postUpdate');
+
+Route::resource('users', 'UserController');
+
+Route::resource('customerinfos', 'CustomerinfoController');
+
+Route::resource('drivers', 'DriverController');
