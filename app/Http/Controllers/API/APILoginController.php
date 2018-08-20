@@ -46,4 +46,31 @@ class APILoginController extends AppBaseController
 			'message' => 'Logged out Successfully.'
 		  ], 200);
 	}
+
+    public function postUpdate(Request $request,$id ){
+
+        $validator = Validator::make($request->all(), [
+           'f_name' => 'nullable|string',
+           'l_name' => 'nullable|string',
+           'phone_no' => 'nullable|numeric',
+           'password' => 'nullable',
+           'email' => 'nullable|string|email|max:255|unique:customerinfos',
+        ]);
+        if ($validator->fails()) {
+            return response()->json($validator->errors());
+        }
+
+       $input = $request->except(['password']);
+       
+       if ($request->password) {
+           $input['password'] = bcrypt($request->password);
+       }
+       //dd($user);
+        $users = Customerinfo::find($id);
+        $users->update($input);
+
+       return response()->json(['success'=> true, 
+        'message'=> 'User details updated successfully...'],200);
+
+    }
 }
