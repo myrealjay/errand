@@ -25,8 +25,8 @@ class APILoginController extends AppBaseController
         }
         $credentials = $request->only('email', 'password');
         try {
-            Config::set('jwt.user', 'App\Customerinfo'); 
-            Config::set('auth.providers.users.model', \App\Customerinfo::class);
+            /*Config::set('jwt.user', 'App\Customerinfo'); 
+            Config::set('auth.providers.users.model', \App\Customerinfo::class);*/
             // verify the credentials and create a token for the user
             if (! $token = JWTAuth::attempt($credentials)) {
                 return response()->json(['error' => 'invalid_credentials'], 401);

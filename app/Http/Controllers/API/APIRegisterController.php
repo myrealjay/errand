@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use App\Customerinfo;
+use App\User;
 use JWTFactory;
 use JWTAuth;
 use Validator;
@@ -29,6 +30,7 @@ class APIRegisterController extends AppBaseController
         $input['password'] = bcrypt($request->password);
 
         Customerinfo::create($input);
+        User::create($input);
 
         $user = Customerinfo::first();
         //dd($user);
