@@ -33,8 +33,9 @@ class APIRegisterController extends AppBaseController
         $user = Customerinfo::first();
         //dd($user);
         $token = JWTAuth::fromUser($user);
-        
-        return Response::json(compact('token'));
+        $customer = Customerinfo::where('email',$request->email)->get();
+        return response()->json(compact('token','customer'));
+        //return Response::json(compact('token'));
     }
 
     public function test(){

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use Validator;
 use JWTFactory;
+use Config;
 use JWTAuth;
 use App\Customerinfo;
 use Illuminate\Support\Facades\Auth;
@@ -24,13 +25,17 @@ class APILoginController extends AppBaseController
         }
         $credentials = $request->only('email', 'password');
         try {
+            Config::set('jwt.user', 'App\Customerinfo'); 
+            Config::set('auth.providers.users.model', \App\Customerinfo::class);
+            // verify the credentials and create a token for the user
             if (! $token = JWTAuth::attempt($credentials)) {
                 return response()->json(['error' => 'invalid_credentials'], 401);
             }
         } catch (JWTException $e) {
             return response()->json(['error' => 'could_not_create_token'], 500);
         }
-        return response()->json(compact('token'));
+        $user = Customerinfo::where('email',$request->email)->get();
+        return response()->json(compact('token','user'));
     }
 
     public function logout(Request $request)
@@ -38,7 +43,7 @@ class APILoginController extends AppBaseController
 		JWTAuth::invalidate($request->token);
 		return response([
 			'status' => 'success',
-			'msg' => 'Logged out Successfully.'
+			'message' => 'Logged out Successfully.'
 		  ], 200);
 	}
 }
