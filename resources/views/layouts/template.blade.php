@@ -41,7 +41,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                     <h1>
                         <a class="navbar-brand" href="index.html">
-                          Shipping 
+                          ErrandPro 
                             
                         </a>
                     </h1>
@@ -53,34 +53,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-lg-auto text-center">
                             <li class="nav-item active  mr-3">
-                                <a class="nav-link" href="index.html">Home
+                                <a class="nav-link" href="index.html">Login
                                     <span class="sr-only">(current)</span>
                                 </a>
                             </li>
                             <li class="nav-item  mr-3">
-                                <a class="nav-link" href="about.html">about</a>
-                            </li>
-							 <li class="nav-item  mr-3">
-                                <a class="nav-link" href="services.html">Services</a>
-                            </li>
-                            <li class="nav-item dropdown mr-3">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    Pages
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="gallery.html">Gallery</a>
-									 <a class="dropdown-item" href="typo.html">Typography</a>
-                                    
-                                   
-                               
-                                </div>
-                            </li>
-                            <li class="nav-item mr-3">
-                                <a class="nav-link" href="contact.html">contact</a>
-                            </li>
-                            <li class="nav-item">
-                               	<i class="fas fa-phone pr-2"></i>CALL US 1-677-124-44227
+                                <a class="nav-link" href="about.html">Register</a>
                             </li>
                         </ul>
                     </div>
@@ -127,32 +105,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</ul>
 			</div>
 			
-					<div class="col-md-2 sign-gd">
-						<h4>Useful Links</h4>
+					<div class="col-md-3 sign-gd">
+						<h4>Know us</h4>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="gallery.html">Gallery</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="index.html">Terms of Service</a></li>
+							<li><a href="about.html">Delivery Policy</a></li>
+							<li><a href="services.html">Become a Rider</a></li>
+							<li><a href="gallery.html">Blog</a></li>
 						</ul>
 					</div>
-					<div class="col-md-4 sign-gd flickr-post">
-						<h4>Instagram</span></h4>
-						<ul>
-							<li><a href="#"><img src="images/g1.jpg" alt=" " class="img-fluid" /></a></li>
-							<li><a href="#"><img src="images/g2.jpg" alt=" " class="img-fluid" /></a></li>
-							<li><a href="#"><img src="images/g3.jpg" alt=" " class="img-fluid" /></a></li>
-							<li><a href="#"><img src="images/g2.jpg" alt=" " class="img-fluid" /></a></li>
-							<li><a href="#"><img src="images/g1.jpg" alt=" " class="img-fluid" /></a></li>
-							<li><a href="#"><img src="images/g3.jpg" alt=" " class="img-fluid" /></a></li>
-							<li><a href="#"><img src="images/g2.jpg" alt=" " class="img-fluid" /></a></li>
-							<li><a href="#"><img src="images/g3.jpg" alt=" " class="img-fluid" /></a></li>
-							<li><a href="#"><img src="images/g1.jpg" alt=" " class="img-fluid" /></a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 sign-gd-two">
-						<h4>Contact Information</h4>
+					<div class="col-md-3 sign-gd flickr-post">
+						<h4>Contact us</span></h4>
 						<div class="address">
 							<div class="address-grid">
 								<div class="address-left">
@@ -180,7 +143,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="address-right">
 									<h6>Location</h6>
-									<p>1234k Avenue,Block-4,New York City.
+									<p>18 Lanre Awolokun street Gbagada express way.
 
 									</p>
 								</div>
@@ -188,10 +151,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</div>
 					</div>
+					<div class="col-md-3 sign-gd-two">
+						<h4>Download Mobile App</h4>
+						
+					</div>
 		</div>
 	</div>
-	</section>
-	<p class="copy-right py-3">&copy 2018 Shipping. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+	</section><!--Waiting for website address by Dapo-->
+	<p class="copy-right py-3">&copy 2018 Errand pro Ltd. Powered by <a href="http://w3layouts.com/">OKB and Associater</a></p>
 	<!-- //footer -->
 </footer>
 <!-- Modal -->

@@ -9,8 +9,8 @@
 					<div class="banner-top banner-top1">
 						<div class="container">
 							<div class="banner-info info2">
-								<h3>Start Moving</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada neque et turpis hendrerit, et porta dui efficitur. Aenean auctor dui sit amet aliquet mollis.</p>
+								<h3>Quick Item delivery</h3>
+								<p>Easily send items from one place to the other with maximum safety guarantee.</p>
 							</div>
 						</div>
 					</div>
@@ -21,8 +21,8 @@
 					<div class="banner-top banner-top2">
 						<div class="container">
 							<div class="banner-info bg3 info2">
-								<h3>Start Moving</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada neque et turpis hendrerit, et porta dui efficitur. Aenean auctor dui sit amet aliquet mollis.</p>
+								<h3>Food Delivery</h3>
+								<p>Just sit back and let us deliver Your meals from your favourite eatries to your doorstep</p>
 							</div>
 						</div>
 					</div>
@@ -31,8 +31,8 @@
 					<div class="banner-top banner-top3">
 						<div class="container">
 							<div class="banner-info bg3">
-								<h3>Start Moving</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada neque et turpis hendrerit, et porta dui efficitur. Aenean auctor dui sit amet aliquet mollis.</p>
+								<h3>Multiple errands</h3>
+								<p>Why dont you have us do the running around for you while you sit back and relax </p>
 							</div>
 						</div>
 					</div>
@@ -49,29 +49,29 @@
 						<div class="col-md-4 banner-grid2">
 							<div class="banner-subg1">
 							<span class="fa fa-globe" aria-hidden="true"></span>
-								<h3 class="mt-3">Worldwide Customers</h3>
+								<h3 class="mt-3">Errand Advantage</h3>
 								<p class="mt-3 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit estibulum nibh urna scing.consectetur adipiscing elit</p>
 								
 								<div class="read-btn">
-									<a href="about.html">Learn more</a>
+									<a href="{{ asset('about.html') }}">Learn more</a>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-4 banner-grid2">
 							<div class="banner-subg1">
 							<span class="fa fa-user" aria-hidden="true"></span>
-								<h3 class="mt-3">Personal Manager</h3>
+								<h3 class="mt-3">Secure transport</h3>
 								<p class="mt-3 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit estibulum nibh urna scing.consectetur adipiscing elit</p>
 								
 								<div class="read-btn">
-									<a href="about.html">Learn more</a>
+									<a href="{{ asset('about.html') }}">Learn more</a>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-4 banner-btmg">
 							<div class="banner-btmg1">
 								<div class="form-text">
-									<h3 class="text-center">Get a Free Quote</h3>
+									<h3 class="text-center">Get </h3>
 									<p class="text-center">Or call one of our customer service</p>
 								</div>
 								<form action="#" method="post" class="banner_form">
@@ -211,45 +211,7 @@
         </section>
 <!-- //smooth-shipping -->
 <!-- distance -->
-<section class="distance-w3 py-md-5">
-		<div class="container py-4 mt-2">
-			<div class="row">
-				<div class="col-md-8 distance-agile-left">
-					<h4 class="mt-2">The Safest Distance Between Two Points.</h4>
-				</div>
-				<div class="col-md-4 distance-agile-right">
-					<a href="contact.html">call us 5-367-123-4567</a>
-				</div>
-			</div>
-         </div>
-</section>
-<!-- //distance -->
-<!-- stats -->
-<section class="stats py-md-5">
-		<div class="container py-4 mt-2">
-			<h3 class="tittle-w3ls text-center mb-3">Our Stats</h3>
-			<p class="tit text-center mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum, voluptatum possimus temporibus vel ab, nesciunt quod!</p>
-		<div class="row inner_w3l_agile_grids-1 pt-4 mt-md-4">
-			<div class="col-sm-4 w3layouts_stats_left w3_counter_grid">
-				<p class="counter">1,546</p>
-				<h3>Satisfied Clients</h3>
-				<h6>Pure satisfaction</h6>
-			</div>
-			<div class="col-sm-4 w3layouts_stats_left w3_counter_grid1">
-			
-				<p class="counter">14,345</p>
-				<h3>Successful Shippings</h3>
-				<h6>Shipping</h6>
-			</div>
-			<div class="col-sm-4 w3layouts_stats_left w3_counter_grid2">
-			
-				<p class="counter">563</p>
-				<h3>Branches Worldwide</h3>
-				<h6>Highest level of credibility</h6>
-			</div>
-		</div>
-   </div>	
-</section>
+
 <!-- //stats -->
 
 @endsection
