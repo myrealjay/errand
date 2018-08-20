@@ -24,7 +24,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="css/JiSlider.css" rel="stylesheet">
 	<!-- //banner-slider -->
 	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
-	 <link href="css/font-awesome.css" rel="stylesheet">
+	 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="//fonts.googleapis.com/css?family=Rubik:400,500,700,900" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
@@ -76,45 +76,41 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- footer -->
 <footer>
 	<section class="footer py-md-5">
-		<div class="container py-4 mt-2">
+		<div class="container py-3 mt-2">
 		<div class="row footer_inner_info_w3ls_agileits">
-			<div class="col-md-3 footer-left">
+			<!--<div class="col-md-3 footer-left">
 				<h2><a href="index.html"> Shipping</a></h2>
 				<p class="mb-3 mt-3">Lorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.</p>
-				<ul class="social-nav footer-social social two">
+				
+                <ul class="social-nav footer-social social two">
 					<li>
 						<a href="#">
-							<i class="fab fa-facebook-f" aria-hidden="true"></i>
+							<i class="fa fa-facebook-f" aria-hidden="true"></i>
 						</a>
 					</li>
 					<li>
 						<a href="#">
-							<i class="fab fa-twitter" aria-hidden="true"></i>
+							<i class="fa fa-twitter" aria-hidden="true"></i>
 						</a>
 					</li>
 					<li>
 						<a href="#">
-							<i class="fab fa-instagram" aria-hidden="true"></i>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fab fa-pinterest" aria-hidden="true"></i>
+							<i class="fa fa-instagram" aria-hidden="true"></i>
 						</a>
 					</li>
 				</ul>
-			</div>
+			</div>-->
 			
-					<div class="col-md-3 sign-gd">
+					<div class="col-md-4 sign-gd">
 						<h4>Know us</h4>
 						<ul>
-							<li><a href="index.html">Terms of Service</a></li>
-							<li><a href="about.html">Delivery Policy</a></li>
-							<li><a href="services.html">Become a Rider</a></li>
-							<li><a href="gallery.html">Blog</a></li>
+							<li><a href="{{ asset('/terms') }}">Terms of Service</a></li>
+							<li><a href="{{ asset('/delivery') }}">Delivery Policy</a></li>
+							<li><a href="{{ asset('/riferregistration') }}">Become a Rider</a></li>
+							<li><a href="{{ asset('/blog') }}">Blog</a></li>
 						</ul>
 					</div>
-					<div class="col-md-3 sign-gd flickr-post">
+					<div class="col-md-4 sign-gd flickr-post">
 						<h4>Contact us</span></h4>
 						<div class="address">
 							<div class="address-grid">
@@ -133,7 +129,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="address-right">
 									<h6>Email Address</h6>
-									<p>Email :<a href="mailto:example@email.com"> mail@example.com</a></p>
+									<p>Email :<a href="mailto:info@okbestate.com"> Info@okbestate.com</a></p>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -151,8 +147,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 sign-gd-two">
+					<div class="col-md-4 sign-gd-two">
 						<h4>Download Mobile App</h4>
+                        <div></div>
+                        <div></div>
 						
 					</div>
 		</div>
@@ -239,23 +237,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //stats -->
 
 	<!-- smooth-scrolling-of-move-up -->
-	<script> 
-		$(document).ready(function () {
-			/*
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-			};
-			*/
-
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
-
-		});
-	</script>
+	
 	<script  src="js/SmoothScroll.min.js"></script>
 	<!-- Bootstrap core JavaScript
     ================================================== -->
