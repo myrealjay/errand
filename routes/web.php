@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('enter');
 });
+Route::get('/register', function () {
+    return view('register');
+});
 
 
 Auth::routes();
