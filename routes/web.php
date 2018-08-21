@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('enter');
 });
+Route::get('/blog', function () {
+    return view('blog');
+});
 
 Route::get('/google', function () {
     return view('welcome');
