@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('enter');
 });
 
+Route::get('/google', function () {
+    return view('welcome');
+});
 
 Auth::routes();
 
