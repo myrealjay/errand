@@ -9,6 +9,7 @@
     <P>To(Optional) : {{$total->to_location2}}</P>
     <p>Description : {{$total->description}}</P>
     <p>Price : {{$total->price}}</p>
+    <button class="btn btn-success">PAY</button>
     
 </div>
 @endsection
