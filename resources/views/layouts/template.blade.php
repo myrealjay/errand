@@ -19,13 +19,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		}
 	</script>
 	<!-- //for-mobile-apps -->
-	 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+	 <link href="{{ URL::asset('css/bootstrap.css') }}" type="text/css" rel="stylesheet" media="all">
 	<!--banner slider  -->
-	<link href="css/JiSlider.css" rel="stylesheet">
+	<link href="{{ URL::asset('css/JiSlider.css') }}" rel="stylesheet">
 	<!-- //banner-slider -->
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+	<link rel="stylesheet" href="{{ URL::asset('css/flexslider.css') }}" type="text/css" media="screen" property="" />
 	 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{ URL::asset('css/w3.css') }}" rel="stylesheet" type="text/css" media="all" />
 	<link href="//fonts.googleapis.com/css?family=Rubik:400,500,700,900" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
 

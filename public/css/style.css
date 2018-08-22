@@ -18,6 +18,18 @@ p {
     line-height: 1.8;
 }
 
+.lg-bg{
+    background: url(../images/bg2.jpg) no-repeat center;
+}
+
+.login-space{
+    height: 100px;
+}
+
+.reg-space{
+    height: 30px;
+}
+
 h1,
 h2,
 h3,
