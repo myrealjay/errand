@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('enter');
 });
+
 Route::get('/blog', function () {
     return view('blog');
 });
@@ -51,6 +52,8 @@ Route::get('/customer/track','CustomersFrontController@track');
 Route::get('/customer/update','CustomersFrontController@update');
 
 Route::post('/customer/update','CustomersFrontController@postUpdate');
+
+Route::post('/customer/post','CustomersFrontController@postUpdate');
 
 Route::resource('users', 'UserController');
 

@@ -23,6 +23,8 @@
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
 
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
   </head>
 
   <body id="page-top">
@@ -137,7 +139,31 @@
     <!-- Demo scripts for this page-->
     <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
     <script src="{{asset('js/demo/chart-area-demo.js')}}"></script>
+     <!-- Google Places API Check -->
+    <script>
+        function initialize() {
+        var input = document.getElementById('from_location');
+        new google.maps.places.Autocomplete(input);
+      }
 
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <script>
+        function initialize() {
+        var input = document.getElementById('to_location');
+        new google.maps.places.Autocomplete(input);
+      }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <script>
+        function initialize() {
+        var input = document.getElementById('to_location2');
+        new google.maps.places.Autocomplete(input);
+      }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
   </body>
 
 </html>
