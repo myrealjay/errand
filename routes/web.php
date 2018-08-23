@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('enter');
 });
 
+Route::get('/test', function () {
+    return view('test');
+});
+
 Route::get('/blog', function () {
     return view('blog');
 });
@@ -46,6 +50,10 @@ Route::post('/customer-logout','CustomersFrontController@logout')->name('custome
 Route::get('/customer-logout','CustomersFrontController@logout')->name('customer-logout');
 
 Route::get('/customer/request','CustomersFrontController@getRequest');
+
+Route::get('/singleway','CustomersFrontController@singleway');
+
+Route::get('/multiway','CustomersFrontController@multiway');
 
 Route::post('/customer/request','CustomersFrontController@postRequest');
 

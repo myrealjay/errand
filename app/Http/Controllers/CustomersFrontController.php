@@ -47,18 +47,22 @@ class CustomersFrontController extends Controller
     public function postRequest(Request $request){
         $total = $request->all();
 
-        $total['price'] = 1000;
-
         //dd($total);
 
+
         if ($request->from_location) {
-        $address = $request->from_location; // Google HQ
+        $address = $request->from_location; 
         $prepAddr = str_replace(' ','+',$address);
         $geocode=file_get_contents('https://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
         $output= json_decode($geocode);
         //dd($output);
-        $lat = $output->results[0]->geometry->location->lat;
-        $lon = $output->results[0]->geometry->location->lng;
+            if($output->status == "OK"){
+                $lat = $output->results[0]->geometry->location->lat;
+                $lon = $output->results[0]->geometry->location->lng;
+            }else{
+                return redirect()->back()->with('message',' Slow or No network.');
+                //Throw this when $output returns an empty array.
+            }
 
         }
 
@@ -68,27 +72,22 @@ class CustomersFrontController extends Controller
         $geocode=file_get_contents('https://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
         $output= json_decode($geocode);
         //dd($output);
-        $lat1 = $output->results[0]->geometry->location->lat;
-        $lon1 = $output->results[0]->geometry->location->lng;
+            if($output->status == "OK"){
+                $lat1 = $output->results[0]->geometry->location->lat;
+                $lon1 = $output->results[0]->geometry->location->lng;
+            }else{
+                return redirect()->back()->with('message',' Slow or No network.');
+                //Throw this when $output returns an empty array.
+            }
 
         }
-
-        /*if ($request->to_location2) {
-        $address = $request->to_location2; 
-        $prepAddr = str_replace(' ','+',$address);
-        $geocode=file_get_contents('https://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
-        $output= json_decode($geocode);
-        //dd($output);
-        $lat2 = $output->results[0]->geometry->location->lat;
-        $lon2 = $output->results[0]->geometry->location->lng;
-
-        }
-*/
         
         $total['km'] = $this->distance($lat1, $lon1, $lat, $lon);
         //$total['km'] = $this->getDistance($lat, $lon,$lat1, $lon1);
 
-        $total['price'] = 65 * $total['km'];
+        $price = 65 * $total['km'];
+
+        $total['price'] = ceil($price);
 
         //dd($total);
 
@@ -123,6 +122,18 @@ class CustomersFrontController extends Controller
     public function getRequest(){
 
         return view ('customer.request');
+
+    }
+
+    public function singleway(){
+
+        return view ('customer.singleway');
+
+    }
+
+    public function multiway(){
+
+        return view ('customer.multiway');
 
     }
 
