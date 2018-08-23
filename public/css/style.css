@@ -145,7 +145,7 @@ li.nav-item {
 }
 
 .banner-top1 {
-    background: url(../images/bg0.jpg) no-repeat center;
+    background: url(../images/bg1.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -268,13 +268,13 @@ label.header span {
     padding: 0.5em 0;
     letter-spacing: 1px;
     border: none;
-    background: #2b0570;
+    background: #734fb6;
     margin-top: 20px;
 }
 
 .banner_form input[type="submit"]:hover {
-    color: #1853a1;
-    background: rgb(255, 255, 255);
+    color: #ffffff;
+    background: #2b0570;
 }
 
 .banner-btm {
@@ -301,7 +301,7 @@ label.header span {
 
 .banner-btmg1 h3 {
     font-size: 28px;
-    color: #2b0570;
+    color: #fff;
     font-weight: 500;
 }
 .banner-subg1 h3, .about-bottom h5 {
@@ -357,7 +357,7 @@ label.header span {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: capitalize;
-    background: #2b0570;
+    background: #9577ce;
     border: 2px solid #2b0570;
     transition: .5s ease-in;
     -webkit-transition: .5s ease-in;
@@ -367,7 +367,8 @@ label.header span {
     border-radius: 0px;
 }
 .read-btn a:hover{
-    background: #ffd200;
+    background: #2b0570;
+    color: #ffffff;
 }
 h4.modal-title {
     font-size: 24px;
@@ -674,7 +675,7 @@ ul.social-nav.model-3d-0.footer-social.social.two {
 }
 
 .address-right p a {
-    color: #2b0570;
+    color: #98a7ff;
     text-decoration: none;
 }
 
@@ -730,7 +731,7 @@ p.copy-right {
     background: #080808;
 }
 p.copy-right a {
-    color: #2b0570;
+    color: #b6cdff;
     text-decoration: none;
 }
 
@@ -1316,8 +1317,8 @@ li.nav-item {
     color: #fff;
 }
 .navbar-light .navbar-toggler {
-    border-color:#2b0570 ;
-    background:#2b0570 ;
+    border-color:#483D8C ;
+    background:#483D8C ;
     padding: 2px 6px;
     margin-top: 5px;
     outline: none;

@@ -140,34 +140,16 @@
                                 <ul>
                                     <li>
                                         <div class="banner-top banner-top1">
-                                            <div class="container">
-                                                <div class="banner-info info2">
-                                                    <h3>Quick Item delivery</h3>
-                                                    <p>Easily send items from one place to the other with maximum safety guarantee.</p>
-                                                </div>
-                                            </div>
                                         </div>
                                     </li>
 
 
                                     <li>
                                         <div class="banner-top banner-top2">
-                                            <div class="container">
-                                                <div class="banner-info bg3 info2">
-                                                    <h3>Food Delivery</h3>
-                                                    <p>Just sit back and let us deliver Your meals from your favourite eatries to your doorstep</p>
-                                                </div>
-                                            </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="banner-top banner-top3">
-                                            <div class="container">
-                                                <div class="banner-info bg3">
-                                                    <h3>Multiple errands</h3>
-                                                    <p>Why dont you have us do the running around for you while you sit back and relax </p>
-                                                </div>
-                                            </div>
                                         </div>
                                     </li>
                                 </ul>
