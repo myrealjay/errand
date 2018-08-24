@@ -10,36 +10,35 @@
 </head>
 <body>
 
-<div class="container">
-  <h2>Dynamic Tabs</h2>
-  <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
+    <form method="POST" action="{{ route('pay') }}" accept-charset="UTF-8" class="form-horizontal" role="form">
+        <div class="row" style="margin-bottom:40px;">
+          <div class="col-md-8 col-md-offset-2">
+            <p>
+                <div>
+                    Lagos Eyo Print Tee Shirt
+                    ₦ 2,950
+                </div>
+            </p>
+            <input type="hidden" name="email" value="otemuyiwa@gmail.com"> {{-- required --}}
+            <input type="hidden" name="orderID" value="345">
+            <input type="hidden" name="amount" value="800"> {{-- required in kobo --}}
+            <input type="hidden" name="quantity" value="3">
+            <input type="hidden" name="metadata" value="{{ json_encode($array = ['key_name' => 'value',]) }}" > {{-- For other necessary things you want to add to your payload. it is optional though --}}
+            <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
+            <input type="hidden" name="key" value="{{ config('paystack.secretKey') }}"> {{-- required --}}
+            {{ csrf_field() }} {{-- works only when using laravel 5.1, 5.2 --}}
 
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-    <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
-  </ul>
+             <input type="hidden" name="_token" value="{{ csrf_token() }}"> {{-- employ this in place of csrf_field only in laravel 5.0 --}}
 
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h3>HOME</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div id="menu1" class="tab-pane fade">
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-    </div>
-    <div id="menu3" class="tab-pane fade">
-      <h3>Menu 3</h3>
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    </div>
-  </div>
-</div>
+
+            <p>
+              <button class="btn btn-success btn-lg btn-block" type="submit" value="Pay Now!">
+              <i class="fa fa-plus-circle fa-lg"></i> Pay Now!
+              </button>
+            </p>
+          </div>
+        </div>
+</form>
 
 </body>
 </html>

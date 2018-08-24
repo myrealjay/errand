@@ -89,6 +89,10 @@ class CustomersFrontController extends Controller
 
         $total['price'] = ceil($price);
 
+        $total['price_kobo'] = ceil($price)*100; //Price in Kobo
+
+        $total['orderID'] = "ERRAND".str_random(5);
+
         //dd($total);
 
         $total = (object) $total;
@@ -147,6 +151,7 @@ class CustomersFrontController extends Controller
     }
 
     public function postUpdate(Request $request){
+        //dd($request->all());
 
        $input = $request->except(['password']);
        
