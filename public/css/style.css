@@ -18,6 +18,11 @@ p {
     line-height: 1.8;
 }
 
+.frm, .frm a{
+    background: #483D8C;
+    color: #FFFFFF;
+}
+
 .lg-bg{
     background: url(../images/bg2.jpg) no-repeat center;
 }
@@ -90,7 +95,7 @@ input[type="submit"],
     -o-transition: .5s ease-in-out;
 }
 .w3layouts-header{
-	background:#ffdc39;
+	background:#483D8C;
 }
 .navbar-light .navbar-brand {
    color:#000;

@@ -32,11 +32,11 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/customer/login', 'CustomersAuthController@getLogin');
 
-Route::post('/customer/login', 'CustomersAuthController@postLogin');
+Route::post('/customer/login', 'CustomersAuthController@postLogin'); 
 
 Route::get('/customer/register', 'CustomersAuthController@getRegister');
 
-Route::post('/customer/register', 'CustomersAuthController@postRegister');
+Route::post('/customer/register', 'CustomersAuthController@postRegister');  
 
 Route::get('/dashboard','CustomersFrontController@dashboard')->name('dashboard');
 

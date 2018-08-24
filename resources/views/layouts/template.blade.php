@@ -54,12 +54,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-lg-auto text-center">
                             <li class="nav-item active  mr-3">
-                                <a class="nav-link" href="customer/login">Login
+                                <a class="nav-link" href="{{url('customer/login')}}">Login
                                     <span class="sr-only">(current)</span>
                                 </a>
                             </li>
                             <li class="nav-item  mr-3">
-                                <a class="nav-link" href="customer/register">Register</a>
+                                <a class="nav-link" href="{{url('customer/register')}}">Register</a>
                             </li>
                         </ul>
                     </div>
