@@ -7,7 +7,7 @@
     <P>From : {{$total->from_location}}</P>
     <P>To : {{$total->to_location}}</P>
     <p>Description : {{$total->description}}</P>
-    <p>Price : {{$total->price}}</p>
+    <p>Price : &#x20a6; {{$total->price}}</p>
     <button class="btn btn-success">PAY</button>
     
 </div>

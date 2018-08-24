@@ -97,17 +97,17 @@ class CustomersFrontController extends Controller
     }
 
     private function distance($lat1, $lon1, $lat, $lon) {
-          $p = 0.017453292519943295;    // Math.PI / 180
+          $p = 0.017453292519943295;    // The Haversine Formula
           //$c = Math.cos;
           $a = 0.5 - cos(($lat1 - $lat) * $p)/2 + 
                   cos($lat * $p) * cos($lat1 * $p) * 
                   (1 - cos(($lon1 - $lon) * $p))/2;
 
-          return 12742 * asin(sqrt($a)); // 2 * R; R = 6371 km
+          return 12742 * asin(sqrt($a)); //  km
     }
 
     private function getDistance($lat, $lon, $lat1, $lon1) {
-            $earth_radius = 6371;
+            $earth_radius = 6371;  // The Haversine Formula
 
             $dLat = deg2rad($lat1 - $lat);
             $dLon = deg2rad($lon1 - $lon);
