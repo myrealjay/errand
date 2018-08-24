@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('enter');
 });
 
+Route::get('/test', function () {
+    return view('test');
+});
+
 Route::get('/blog', function () {
     return view('blog');
 });
@@ -47,6 +51,10 @@ Route::get('/customer-logout','CustomersFrontController@logout')->name('customer
 
 Route::get('/customer/request','CustomersFrontController@getRequest');
 
+Route::get('/singleway','CustomersFrontController@singleway');
+
+Route::get('/multiway','CustomersFrontController@multiway');
+
 Route::post('/customer/request','CustomersFrontController@postRequest');
 
 Route::get('/customer/logs','CustomersFrontController@logs');
@@ -64,3 +72,7 @@ Route::resource('users', 'UserController');
 Route::resource('customerinfos', 'CustomerinfoController');
 
 Route::resource('drivers', 'DriverController');
+
+Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay'); //Paystack payment
+
+Route::get('/payment/callback', 'PaymentController@handleGatewayCallback'); //Paystack Payment

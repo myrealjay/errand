@@ -34,7 +34,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <body>
 	<!-- header -->
-	<section class="w3layouts-header py-2">
+	<section class="errand-header py-2">
 		<div class="container">
 			  <!-- header -->
         <header>
@@ -157,7 +157,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	</section><!--Waiting for website address by Dapo-->
-	<p class="copy-right py-3">&copy 2018 Errand pro Ltd. Powered by <a href="http://w3layouts.com/">OKB and Associater</a></p>
+	<p class="copy-right py-3">&copy 2018 Errand pro Ltd. Powered by <a href="http://errand.com/">OKB and Associater</a></p>
 	<!-- //footer -->
 </footer>
 <!-- Modal -->
@@ -171,7 +171,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </button>
       </div>
       <div class="modal-body">
-					<div class="agileits-w3layouts-info">
+					<div class="agileits-errand-info">
 						<img src="images/g1.jpg" class="img-fluid" alt="" />
 						<p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac rhoncus risus odio eget nunc. Pellentesque ac fermentum diam. Integer eu facilisis nunc, a iaculis felis. Pellentesque pellentesque tempor enim, in dapibus turpis porttitor quis. </p>
 					</div>

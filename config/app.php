@@ -156,6 +156,7 @@ return [
         \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
         \InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class, 
         \Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+        \Unicodeveloper\Paystack\PaystackServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -218,6 +219,7 @@ return [
         'Flash'     => Laracasts\Flash\Flash::class,
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
         'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
+        'Paystack' => Unicodeveloper\Paystack\Facades\Paystack::class,
     ],
 
 ];

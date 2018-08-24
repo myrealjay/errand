@@ -54,7 +54,7 @@ class APILoginController extends AppBaseController
            'l_name' => 'nullable|string',
            'phone_no' => 'nullable|numeric',
            'password' => 'nullable',
-           'email' => 'nullable|string|email|max:255|unique:customerinfos',
+           'email' => 'nullable|string|email|max:255',
         ]);
         if ($validator->fails()) {
             return response()->json($validator->errors());
@@ -65,7 +65,7 @@ class APILoginController extends AppBaseController
        if ($request->password) {
            $input['password'] = bcrypt($request->password);
        }
-       //dd($user);
+       //dd($input);
         $users = Customerinfo::find($id);
         $users->update($input);
 
