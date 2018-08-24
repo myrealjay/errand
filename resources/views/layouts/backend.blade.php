@@ -23,13 +23,15 @@
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
 
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
   </head>
 
   <body id="page-top">
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="index.html">Welcome {{\App\Customerinfo::find(Session::get('loggedin'))->f_name}} !</a>
+      <a class="navbar-brand mr-1" href="{{url('/')}}">Welcome {{\App\Customerinfo::find(Session::get('loggedin'))->f_name}} !</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -137,7 +139,31 @@
     <!-- Demo scripts for this page-->
     <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
     <script src="{{asset('js/demo/chart-area-demo.js')}}"></script>
+     <!-- Google Places API Check -->
+    <script>
+        function initialize() {
+        var input = document.getElementById('from_location');
+        new google.maps.places.Autocomplete(input);
+      }
 
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <script>
+        function initialize() {
+        var input = document.getElementById('to_location');
+        new google.maps.places.Autocomplete(input);
+      }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <script>
+        function initialize() {
+        var input = document.getElementById('to_location2');
+        new google.maps.places.Autocomplete(input);
+      }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
   </body>
 
 </html>

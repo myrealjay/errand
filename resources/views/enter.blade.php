@@ -1,7 +1,7 @@
 @extends('layouts.template')
 
 @section('content')
-	<!-- banner -->
+	<!-- banner --><!--
 	<section class="banner-silder">
 		<div id="JiSlider" class="jislider">
 			<ul>
@@ -39,8 +39,12 @@
 				</li>
 			</ul>
 		</div>
-		</section>
-		<!-- //banner -->
+		</section>-->
+        <!-- //banner -->
+        <section id="topchart">
+            <span class="bigtxt">Enjoy ErrandPro</span><br/>
+            Why dont you have us do the running around for you while you sit back and relax 
+        </section>
 		<!-- banner bottom -->
 		<section class="banner-btm">
 			<div class="container">
@@ -90,7 +94,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- //banner bottom -->
+		<!-- //banner bottom --><!--
 		<section class="wthree-row w3-about py-md-5">
 		<div class="container py-4 mt-2">
 			<h3 class="tittle-w3ls text-center mb-3">Steps in using ErrandPro.</h3>
@@ -115,6 +119,70 @@
 					<div class="card-body w3ls-card">
 					  <h5 class="card-title">Step 1</h5>
 					  <p class="card-text mb-3 ">This is third and simplest step in using errand pro.</p>
+					</div>
+				  </div>
+				</div>
+            </div>
+        </section>-->
+        <!--dapo's new section-->
+        <section class="wthree-row w3-about py-md-5">
+		<div class="container py-4 mt-2">
+			<h3 class="tittle-w3ls text-center mb-3">Steps in using ErrandPro.</h3>
+			<p class="tit text-center mx-auto">dpp hmmm</p>
+              <div class="card-deck pt-4 mt-md-4">
+				  <div class="card">
+                  <div id="phonei" >
+                      <div id="phonetop">
+                        <img src="/images/phonetop.jpg" width="100%" height="width" alt="reload to get usage tips" id="toppic"/>
+                      </div>
+                        <div class="banner-silder">
+                            <div id="JiSlider" class="jislider">
+                                <ul>
+                                    <li>
+                                        <div class="banner-top banner-top1">
+                                            <div class="container">
+                                                <div class="banner-info info2">
+                                                    <h3>Quick Item delivery</h3>
+                                                    <p>Easily send items from one place to the other with maximum safety guarantee.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                    <li>
+                                        <div class="banner-top banner-top2">
+                                            <div class="container">
+                                                <div class="banner-info bg3 info2">
+                                                    <h3>Food Delivery</h3>
+                                                    <p>Just sit back and let us deliver Your meals from your favourite eatries to your doorstep</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="banner-top banner-top3">
+                                            <div class="container">
+                                                <div class="banner-info bg3">
+                                                    <h3>Multiple errands</h3>
+                                                    <p>Why dont you have us do the running around for you while you sit back and relax </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>  
+                     <div id="phonebuttom">
+                     <img src="/images/phonebuttom.jpg" width="100%" height="width" alt="reload to get usage tips" id="buttompic"/>
+                      </div>
+                 </div>
+				  </div>
+				  <div class="card">
+					<img src="{{asset ('images/step2.png') }}" class="img-fluid"  alt="Card image cap">
+					<div class="card-body w3ls-card">
+					  <h5 class="card-title">Step 1</h5>
+					  <p class="card-text mb-3 ">This is second and simplest step in using errand pro.</p>
 					</div>
 				  </div>
 				</div>

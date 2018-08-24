@@ -14,6 +14,11 @@
 Route::get('/', function () {
     return view('enter');
 });
+
+Route::get('/test', function () {
+    return view('test');
+});
+
 Route::get('/blog', function () {
     return view('blog');
 });
@@ -46,6 +51,10 @@ Route::get('/customer-logout','CustomersFrontController@logout')->name('customer
 
 Route::get('/customer/request','CustomersFrontController@getRequest');
 
+Route::get('/singleway','CustomersFrontController@singleway');
+
+Route::get('/multiway','CustomersFrontController@multiway');
+
 Route::post('/customer/request','CustomersFrontController@postRequest');
 
 Route::get('/customer/logs','CustomersFrontController@logs');
@@ -55,6 +64,8 @@ Route::get('/customer/track','CustomersFrontController@track');
 Route::get('/customer/update','CustomersFrontController@update');
 
 Route::post('/customer/update','CustomersFrontController@postUpdate');
+
+Route::post('/customer/post','CustomersFrontController@postUpdate');
 
 Route::resource('users', 'UserController');
 
