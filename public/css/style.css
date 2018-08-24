@@ -103,7 +103,7 @@ li.nav-item {
 .navbar-light .navbar-nav .nav-link {
     font-weight: 600;
     text-transform: capitalize;
-    color: #000;
+    color: rgb(190, 150, 170);
     letter-spacing: 1px;
     padding: 0 0.5em;
 }
@@ -114,9 +114,9 @@ li.nav-item {
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-	color:#fff;
+	color:rgb(255, 255, 255);
 	background:transparent;
-	border-radius: 5px;
+    border-radius: 5px;
 }
 
 .dropdown-item {
@@ -171,10 +171,20 @@ li.nav-item {
     -moz-background-size: cover;
 }
 
+.banner-top4 {
+    background: url(../images/bg4.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+}
+
 .banner-top1,
 .banner-top2,
-.banner-top3 {
-    min-height: 610px;
+.banner-top3,
+.banner-top4 {
+    min-height: 520px;
 }
 
 .banner-info h3 {
@@ -462,7 +472,7 @@ section.slider {
     padding: 0 !important;
 }
 .testimonials {
-    background: transparent url(../images/bg0.jpg)no-repeat 0px 0px;
+    background: transparent url(../images/bikers2.jpg)no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -528,7 +538,7 @@ section.slider {
     display: inline-block;
     font-size: .8em;
     font-weight: bold;
-    color: #2b0570;
+    color: #b9fffb;
     padding-left: 20px;
 }
 /*-- //testimonials --*/
@@ -1559,15 +1569,19 @@ h3.tittle-w3ls {
 }
 
 #phonei {
-    background-color: #fca;
-    border:10px solid #333;
     border-radius: 35px;
+    max-width: 400px;
 }
 #toppic {
     border-radius: 25px 25px 0 0;
 }
 #buttompic {
     border-radius: 0 0 25px 25px;
+}
+#midpic {
+    background-image: url('/images/PhonemidG.png');
+    background-size: cover;
+    padding:0 4%;
 }
 #sungal {
     /*background-image: url('css/step1.png');*/
@@ -1578,7 +1592,7 @@ h3.tittle-w3ls {
 #topchart {
     width:100vw;
     height:80vh;
-    background-image: url('/images/bg0.jpg');
+    background-image: url('/images/bikers.jpg');
     background-size:cover;
     text-align:center;
     color:#fff;
@@ -1587,6 +1601,77 @@ h3.tittle-w3ls {
 }
 .bigtxt {
     font-size: 4vw;
+}
+.roundtag {
+    width:7%;
+    padding-top:6%;
+    border:3px solid #240677;
+    border-radius: 50%;
+    float:left;
+    transition:0.6s;
+}
+.roundtag:hover {
+    background-color: #361492;
+    box-shadow: 0 0 10px 5px  #9c85db;
+}
+.txts {
+    padding:1px;
+    font-size:150%;
+    transition:0.6s;
+    display:block;
+}
+.txts:hover {
+    
+}
+.linkcl {
+    width:4px;
+    height:100px;
+    background-color:#240677;
+    margin-left:3%;
+    margin-right:5%;
+    margin-top:1.5vh;
+    margin-bottom:0.5vh;
+    float:left;
+    
+}
+
+linkcl:hover {
+    box-shadow: 0 0 10px 5px  #240677;
+}
+.linkcls {
+    width:4px;
+    height:70px;
+    background-color:#ffffff;
+    margin-left:3%;
+    margin-right:5%;
+    margin-top:1.5vh;
+    margin-bottom:0.5vh;
+    float:left; 
+}
+.clrx {
+    clear:both;
+    
+}
+.sect {
+    padding:10px 10%;
+    transition:0.6s;
+    border-radius: 15px;
+}
+.sect:hover {
+    background-color: #eeeeee;
+    font-style:italic;
+    font-weight:bold;
+}
+.untouched {
+    font-size:16px;
+    font-weight: normal;
+    font-style: normal;
+    padding:20px;
+}
+.untouched:hover {
+    font-size:16px;
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* -- //Responsive code -- */

@@ -52,10 +52,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-lg-auto text-center">
-                            <li class="nav-item active  mr-3">
-                                <a class="nav-link" href="index.html">Login
-                                    <span class="sr-only">(current)</span>
-                                </a>
+                            <li class="nav-item  mr-3">
+                                <a class="nav-link" href="index.html">Login</a>
                             </li>
                             <li class="nav-item  mr-3">
                                 <a class="nav-link" href="about.html">Register</a>
@@ -104,10 +102,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-4 sign-gd">
 						<h4>Know us</h4>
 						<ul>
-							<li><a href="{{ asset('/terms') }}">Terms of Service</a></li>
-							<li><a href="{{ asset('/delivery') }}">Delivery Policy</a></li>
-							<li><a href="{{ asset('/riferregistration') }}">Become a Rider</a></li>
-							<li><a href="{{ asset('/blog') }}">Blog</a></li>
+							<li><a href="{{ url('/about') }}">About Us</a></li>
+							<li><a href="{{ url('/terms') }}">Terms of Service</a></li>
+							<li><a href="{{ url('/delivery') }}">Delivery Policy</a></li>
+							<li><a href="{{ url('/riferregistration') }}">Become a Rider</a></li>
+							<li><a href="{{ url('/blog') }}">Blog</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4 sign-gd flickr-post">

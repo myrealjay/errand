@@ -1,45 +1,7 @@
 @extends('layouts.template')
 
 @section('content')
-	<!-- banner --><!--
-	<section class="banner-silder">
-		<div id="JiSlider" class="jislider">
-			<ul>
-				<li>
-					<div class="banner-top banner-top1">
-						<div class="container">
-							<div class="banner-info info2">
-								<h3>Quick Item delivery</h3>
-								<p>Easily send items from one place to the other with maximum safety guarantee.</p>
-							</div>
-						</div>
-					</div>
-				</li>
-
-
-				<li>
-					<div class="banner-top banner-top2">
-						<div class="container">
-							<div class="banner-info bg3 info2">
-								<h3>Food Delivery</h3>
-								<p>Just sit back and let us deliver Your meals from your favourite eatries to your doorstep</p>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="banner-top banner-top3">
-						<div class="container">
-							<div class="banner-info bg3">
-								<h3>Multiple errands</h3>
-								<p>Why dont you have us do the running around for you while you sit back and relax </p>
-							</div>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-		</section>-->
+	
         <!-- //banner -->
         <section id="topchart">
             <span class="bigtxt">Enjoy ErrandPro</span><br/>
@@ -133,39 +95,97 @@
 				  <div class="card">
                   <div id="phonei" >
                       <div id="phonetop">
-                        <img src="/images/phonetop.jpg" width="100%" height="width" alt="reload to get usage tips" id="toppic"/>
-                      </div>
-                        <div class="banner-silder">
-                            <div id="JiSlider" class="jislider">
-                                <ul>
-                                    <li>
-                                        <div class="banner-top banner-top1">
-                                        </div>
-                                    </li>
+                        <img src="/images/PhonetopG.png" width="100%" height="width" alt="reload to get usage tips" id="toppic"/>
+                      </div id="phonemid">
+                        <div id=midpic>
+                            <div class="banner-silder">
+                                <div id="JiSlider" class="jislider">
+                                    <ul>
+                                        <li>
+                                            <div class="banner-top banner-top1">
+                                            </div>
+                                        </li>
 
 
-                                    <li>
-                                        <div class="banner-top banner-top2">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="banner-top banner-top3">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>  
+                                        <li>
+                                            <div class="banner-top banner-top2">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="banner-top banner-top3">
+                                            </div>
+																				</li>
+																				<li>
+                                            <div class="banner-top banner-top4">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> 
+                        </div> 
                      <div id="phonebuttom">
-                     <img src="/images/phonebuttom.jpg" width="100%" height="width" alt="reload to get usage tips" id="buttompic"/>
+                     <img src="/images/PhonebottomG.png" width="100%" height="width" alt="reload to get usage tips" id="buttompic"/>
                       </div>
                  </div>
 				  </div>
 				  <div class="card">
-					<img src="{{asset ('images/step2.png') }}" class="img-fluid"  alt="Card image cap">
-					<div class="card-body w3ls-card">
-					  <h5 class="card-title">Step 1</h5>
-					  <p class="card-text mb-3 ">This is second and simplest step in using errand pro.</p>
-					</div>
+                      <div class="sect">
+                        <div class="roundtag">
+
+                        </div>
+                        <div class="txts">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Install the mobile app
+                        </div>
+												<div class="clrx"></div>
+												<div class="linkcl"></div>
+												<div class="untouched"> 
+													details bla bla bla about the arrand app, dont forget the important details
+												</div>
+												<div class="clrx"></div>
+											</div>
+											<div class="sect">
+                        <div class="roundtag">
+
+                        </div>
+                        <div class="txts">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First and foremost step as follows
+                        </div>
+												<div class="clrx"></div>
+												<div class="linkcl"></div>
+												<div class="untouched"> 
+													details bla bla bla about the arrand app, dont forget the important details
+												</div>
+												<div class="clrx"></div>
+											</div>
+											<div class="sect">
+                        <div class="roundtag">
+
+                        </div>
+                        <div class="txts">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First and foremost step as follows
+                        </div>
+												<div class="clrx"></div>
+												<div class="linkcl"></div>
+												<div class="untouched"> 
+													details bla bla bla about the arrand app, dont forget the important details
+												</div>
+												<div class="clrx"></div>
+											</div>
+											<div class="sect">
+                        <div class="roundtag">
+
+                        </div>
+                        <div class="txts">
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First and foremost step as follows<br/>
+                        </div>
+												<div class="clrx"></div>
+												<div class="linkcls"></div>
+												<div class="untouched"> 
+													details bla bla bla about the arrand app, dont forget the important details
+												</div>
+												<div class="clrx"></div>
+                      </div>
+					
 				  </div>
 				</div>
             </div>
@@ -223,40 +243,10 @@
 		<div class="container py-4 mt-2">
 			<h3 class="tittle-w3ls text-center mb-3">Reasons why u Need Errand pro.</h3>
 			<p class="tit text-center mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum, voluptatum possimus temporibus vel ab, nesciunt quod!</p>
-              <div class="card-deck pt-4 mt-md-4">
-				  <div class="card">
-					<img src="images/g1.jpg" class="img-fluid" alt="Card image cap">
-					<div class="card-body w3ls-card">
-					  <h5 class="card-title">Moving Worldwide</h5>
-					  <p class="card-text mb-3 ">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-						<div class="ab_button">
-							<a class="btn btn-primary btn-lg hvr-underline-from-left" href="#" role="button" data-toggle="modal" data-target="#myModal">Read More </a>
-						</div>
-					</div>
-				  </div>
-				  <div class="card">
-					<img src="images/g2.jpg" class="img-fluid" alt="Card image cap">
-					<div class="card-body w3ls-card">
-					  <h5 class="card-title">Every day is moving day</h5>
-					   <p class="card-text mb-3 ">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-						<div class="ab_button">
-							<a class="btn btn-primary btn-lg hvr-underline-from-left" href="#" role="button" data-toggle="modal" data-target="#myModal">Read More </a>
-						</div>
-					</div>
-				  </div>
-				  <div class="card">
-					<img src="images/g3.jpg" class="img-fluid" alt="Card image cap">
-					<div class="card-body w3ls-card">
-					  <h5 class="card-title">Third Party Services</h5>
-					   <p class="card-text mb-3 ">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-						<div class="ab_button">
-							<a class="btn btn-primary btn-lg hvr-underline-from-left" href="#" role="button" data-toggle="modal" data-target="#myModal">Read More </a>
-						</div>
-					</div>
-				  </div>
-				</div>
-            </div>
-        </section>
+			<div class="card-deck pt-4 mt-md-4">
+			</div>
+		</div>
+	</section>
 <!-- //smooth-shipping -->
 <!-- distance -->
 
