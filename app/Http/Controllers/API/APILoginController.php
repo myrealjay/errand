@@ -29,7 +29,7 @@ class APILoginController extends AppBaseController
             Config::set('auth.providers.users.model', \App\Customerinfo::class);*/
             // verify the credentials and create a token for the user
             if (! $token = JWTAuth::attempt($credentials)) {
-                return response()->json(['error' => 'invalid_credentials'], 401);
+                return response()->json(['error' => 'invalid_credentials'], 200);
             }
         } catch (JWTException $e) {
             return response()->json(['error' => 'could_not_create_token'], 500);

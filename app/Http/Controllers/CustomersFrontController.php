@@ -47,10 +47,6 @@ class CustomersFrontController extends Controller
     public function postRequest(Request $request){
         $total = $request->all();
 
-        $total['price'] = 1000;
-
-        //dd($total);
-
         if ($request->from_location) {
         $address = $request->from_location; // Google HQ
         $prepAddr = str_replace(' ','+',$address);
