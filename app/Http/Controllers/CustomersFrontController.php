@@ -34,8 +34,10 @@ class CustomersFrontController extends Controller
     }
 
     public function track(){
-
-       return view ('customer.track');
+        $customer = Session::get('loggedin');
+       $tracker = \App\ErrandTracker::where(['status'=>1,'customerID'=>$customer])->get();
+       //dd($tracker);
+       return view ('customer.track',compact('tracker'));
 
     }
 

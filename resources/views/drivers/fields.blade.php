@@ -34,6 +34,15 @@
     {!! Form::password('password', ['class' => 'form-control']) !!}
 </div>
 
+<!-- Status -->
+<div class="form-group col-sm-6">
+    {!! Form::label('status', 'Status:') !!}
+    <select name="status" class="form-control">
+     <option value="" disabled selected >Select Status</option>
+     <option value="1">Active</option>
+     <option value="0">Inactive</option>
+    </select>
+</div>
 
 <!-- Address Field -->
 <div class="form-group col-sm-6">

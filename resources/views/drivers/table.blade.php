@@ -7,6 +7,7 @@
         <th>Email</th>
        <!--  <th>Password</th> -->
         <th>Address</th>
+        <th>Status</th>
         <th>Driver's Image</th>
         <!-- <th>Next Of Kin</th>
         <th>Next Address</th>
@@ -28,6 +29,11 @@
             <td>{!! $driver->email !!}</td>
             <!-- <td>{!! $driver->password !!}</td> -->
             <td>{!! $driver->address !!}</td>
+            @if($driver->status == 0)
+            <td><p style="color:red">Inactive</p></td>
+            @else
+            <td><p style="color:blue">Active</p></td>
+            @endif
             <td><img src="{!! $driver->picture !!}" width="100"></td>
             <!-- <td>{!! $driver->next_of_kin !!}</td>
             <td>{!! $driver->next_address !!}</td>

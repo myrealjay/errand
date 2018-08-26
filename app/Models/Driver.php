@@ -50,7 +50,8 @@ class Driver extends Model
         'd_o_b',
         'nationality',
         'lga',
-        'picture'
+        'picture',
+        'status'
     ];
 
     /**
@@ -73,7 +74,8 @@ class Driver extends Model
         'd_o_b' => 'string',
         'nationality' => 'string',
         'lga' => 'string',
-        'picture' => 'string'
+        'picture' => 'string',
+        'status' => 'string'
     ];
 
     /**
