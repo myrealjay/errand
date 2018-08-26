@@ -76,3 +76,5 @@ Route::resource('drivers', 'DriverController');
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay'); //Paystack payment
 
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback'); //Paystack Payment
+
+Route::post('/payviacode', 'PaymentController@payViaCode')->name('paycode'); //Paystack Authorization code

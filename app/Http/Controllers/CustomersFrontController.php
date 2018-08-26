@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Customerinfo;
+use App\CustomerRecord;
 use Session;
 
 class CustomersFrontController extends Controller
@@ -40,7 +41,8 @@ class CustomersFrontController extends Controller
 
     public function logs(){
 
-       return view ('customer.logs');
+       $logs = CustomerRecord::find(Session::get('loggedin'))->orderBy('id','desc')->paginate(10);
+       return view ('customer.logs',compact('logs'));
 
     }
 
@@ -88,7 +90,7 @@ class CustomersFrontController extends Controller
 
         $total['price_kobo'] = ceil($price)*100; //Price in Kobo
 
-        $total['orderID'] = "ERRAND".str_random(5);
+        $total['orderID'] = "ERRAND".str_random(11);
 
         //dd($total);
 
