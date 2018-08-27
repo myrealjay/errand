@@ -14,7 +14,8 @@ class CustomerRecord extends Model
 						    'trip_type',
 						    'price',
 						    'status',
-						    'orderID'
+						    'orderID',
+						    'customerID'
 						    ];
 
     

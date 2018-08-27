@@ -41,8 +41,9 @@ class PaymentController extends Controller
             $input = $paymentDetails['data']['authorization']['authorization_code'];
             //dd($input);
             $inputs['status'] = 'Successful';
+            $inputs['customerID'] = Session::get('loggedin');
             $users->update(['authorization_code'=>$input]);
-            CustomerRecord::create($inputs);
+            //CustomerRecord::create($inputs);
 
             //Getting the Driver
 
@@ -54,6 +55,10 @@ class PaymentController extends Controller
                 array_push($pick, $key->id);
             }
             //dd($pick);
+            //dd($pick);
+	            if ($pick == null) {
+	            	return redirect('/customer/request')->with('message','All drivers are engaged at the moment....Pls try again');
+	            }
             $index = array_rand($pick,1);
             $random = $pick[$index];
 
@@ -67,6 +72,7 @@ class PaymentController extends Controller
 
             $tracking = ['orderID'=>$request->orderID,'status'=>1,'driverID'=>$random,'customerID'=>Session::get('loggedin')];
             \App\ErrandTracker::create($tracking);
+            CustomerRecord::create($inputs);
              }else{
                 return redirect('/customer/request')->with('message','All drivers are engaged at the monent...Pls try again');
             }
@@ -75,7 +81,8 @@ class PaymentController extends Controller
 
             $inputs = $paymentDetails['data']['metadata'];
             $inputs['status'] = 'Successful';
-            CustomerRecord::create($inputs);
+            $inputs['customerID'] = Session::get('loggedin');
+            //CustomerRecord::create($inputs);
 
             //Getting the Driver
 
@@ -87,6 +94,9 @@ class PaymentController extends Controller
                 array_push($pick, $key->id);
             }
             //dd($pick);
+	            if ($pick == null) {
+	            	return redirect('/customer/request')->with('message','All drivers are engaged at the moment....Pls try again');
+	            }
             $index = array_rand($pick,1);
             $random = $pick[$index];
 
@@ -100,6 +110,7 @@ class PaymentController extends Controller
 
             $tracking = ['orderID'=>$request->orderID,'status'=>1,'driverID'=>$random,'customerID'=>Session::get('loggedin')];
             \App\ErrandTracker::create($tracking);
+            CustomerRecord::create($inputs);
             }else{
                 return redirect('/customer/request')->with('message','All drivers are engaged at the monent...Pls try again');
             }
@@ -140,31 +151,36 @@ class PaymentController extends Controller
         if ($response['status']) {
             $inputs = $request->all();
             $inputs['status'] = 'Successful';
-            CustomerRecord::create($inputs);
+            $inputs['customerID'] = Session::get('loggedin');
+            //CustomerRecord::create($inputs);
 
             //Getting the Driver
 
             $select = \App\Models\Driver::where('status',0)->get();
             //dd($select);
             if($select){
-            $pick = [];
-            foreach ($select as $key ) {
-                array_push($pick, $key->id);
-            }
-            //dd($pick);
-            $index = array_rand($pick,1);
-            $random = $pick[$index];
+	            $pick = [];
+	            foreach ($select as $key ) {
+	                array_push($pick, $key->id);
+	            }
+	            //dd($pick);
+	            if ($pick == null) {
+	            	return redirect('/customer/request')->with('message','All drivers are engaged at the moment....Pls try again');
+	            }
+	            $index = array_rand($pick,1);
+	            $random = $pick[$index];
 
-            $driver = \App\Models\Driver::where('id',$random)->get();
-            // Send an SMS to the Biker to check his App.
+	            $driver = \App\Models\Driver::where('id',$random)->get();
+	            // Send an SMS to the Biker to check his App.
 
-            //dd($driver);
-            $input = ['status' => 1];
-            $driverUpdate = \App\Models\Driver::find($random);
-            $driverUpdate->update($input);
+	            //dd($driver);
+	            $input = ['status' => 1];
+	            $driverUpdate = \App\Models\Driver::find($random);
+	            $driverUpdate->update($input);
 
-            $tracking = ['orderID'=>$request->orderID,'status'=>1,'driverID'=>$random,'customerID'=>Session::get('loggedin')];
-            \App\ErrandTracker::create($tracking);
+	            $tracking = ['orderID'=>$request->orderID,'status'=>1,'driverID'=>$random,'customerID'=>Session::get('loggedin')];
+	            \App\ErrandTracker::create($tracking);
+	            CustomerRecord::create($inputs);
             }else{
                 return redirect('/customer/request')->with('message','All drivers are engaged at the monent...Pls try again');
             }    

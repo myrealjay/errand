@@ -77,7 +77,7 @@
                 @endif
             </div>
 
-            <input type="hidden" name="role" value="0">
+            <input type="hidden" name="role" value="1">
 
             <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
                 <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">

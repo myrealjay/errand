@@ -43,7 +43,9 @@ class CustomersFrontController extends Controller
 
     public function logs(){
 
-       $logs = CustomerRecord::find(Session::get('loggedin'))->orderBy('id','desc')->paginate(10);
+       /*$logs = CustomerRecord::find(Session::get('loggedin'))->orderBy('id','desc')->paginate(10);*/
+       $logs = CustomerRecord::where('customerID',Session::get('loggedin'))->orderBy('customerID','desc')->paginate(10);
+       //dd($logs);
        return view ('customer.logs',compact('logs'));
 
     }
@@ -54,7 +56,7 @@ class CustomersFrontController extends Controller
         if ($request->from_location) {
         $address = $request->from_location; 
         $prepAddr = str_replace(' ','+',$address);
-        $geocode=file_get_contents('https://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
+        $geocode=file_get_contents('https://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false&key=AIzaSyCy4AGMeMLvNWcVq5qjPjIu5cBaQr8QECE');
         $output= json_decode($geocode);
         //dd($output);
             if($output->status == "OK"){
@@ -70,7 +72,7 @@ class CustomersFrontController extends Controller
         if ($request->to_location) {
         $address = $request->to_location; 
         $prepAddr = str_replace(' ','+',$address);
-        $geocode=file_get_contents('https://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
+        $geocode=file_get_contents('https://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false&key=AIzaSyCy4AGMeMLvNWcVq5qjPjIu5cBaQr8QECE');
         $output= json_decode($geocode);
         //dd($output);
             if($output->status == "OK"){

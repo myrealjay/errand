@@ -23,6 +23,7 @@ class CreateCustomerRecordsTable extends Migration
             $table->string('price');
             $table->string('status');
             $table->string('orderID');
+            $table->string('customerID');
             $table->timestamps();
             $table->softDeletes();
         });
