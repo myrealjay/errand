@@ -1,0 +1,9 @@
+.req{
+	background-image: url(../images/curr.gif);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.req-spa{
+	height: 300px;
+}

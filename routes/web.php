@@ -23,6 +23,10 @@ Route::get('/blog', function () {
     return view('blog');
 });
 
+Route::get('/faq', function () {
+    return view('faq');
+});
+
 Route::get('/google', function () {
     return view('welcome');
 });

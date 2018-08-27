@@ -1,11 +1,19 @@
 @extends('layouts.template')
 
 @section('content')
+<style type="text/css">
+
+
+
+</style>
+
+
+
 <div class="col-md-12 lg-bg">
     <div class="col-sm-12 login-space"></div>
     <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-md-6 col-md-offset-2">
+        <div class="col-sm-4"></div>
+        <div class="col-md-4 col-md-offset-2">
             <div class="panel panel-primary">
                 <div class="panel-heading"></div>
 
@@ -15,7 +23,7 @@
                             <h3 class="text-center">Customer Login</h3>
                             <div class="text-center">
                                 <!--::::::::::THE LOGIN BUTTON::::::::::::-->
-                                <button class="frm w3-btn w3-border w3-border-white" onclick="toggle('MAY')">Login with email</button>
+                                <button class="frm w3-btn w3-border w3-border-white" autofocus onclick="toggle('MAY')">Login with email</button>
                                 <button class="frm w3-btn w3-border w3-border-white" onclick="toggle('JUNE')">Login with phone</button>
                             </div>
                             <p>&nbsp;</p>
@@ -38,7 +46,7 @@
                                     {{ csrf_field() }}
 
                                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                        <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                                        <label for="email" class="col-md-12 control-label">E-Mail Address</label>
 
                                         <div class="col-md-12">
                                             <input id="email" type="text" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
@@ -94,10 +102,10 @@
                                     {{ csrf_field() }}
 
                                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                        <label for="email" class="col-md-4 control-label">Phone Number</label>
+                                        <label for="email" class="col-md-12 control-label">Phone Number</label>
 
                                         <div class="col-md-12">
-                                            <input id="email" type="text" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                                            <input id="email" type="number" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
 
                                             @if ($errors->has('email'))
                                             <span class="help-block">
@@ -163,5 +171,15 @@
                     div.style.display = 'none';
             }
         }
+    </script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('button').on('click', function() {
+                $('button').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
     </script>
     @endsection

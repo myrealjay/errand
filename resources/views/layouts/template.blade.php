@@ -53,10 +53,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-lg-auto text-center">
-                            <li class="nav-item active  mr-3">
-                                <a class="nav-link" href="{{url('customer/login')}}">Login
-                                    <span class="sr-only">(current)</span>
-                                </a>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="{{url('customer/login')}}">Login</a>
                             </li>
                             <li class="nav-item  mr-3">
                                 <a class="nav-link" href="{{url('customer/register')}}">Register</a>
@@ -110,6 +108,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="{{ url('/delivery') }}">Delivery Policy</a></li>
 							<li><a href="{{ url('/riferregistration') }}">Become a Rider</a></li>
 							<li><a href="{{ url('/blog') }}">Blog</a></li>
+							<li><a href="{{ url('/faq') }}">FAQs</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4 sign-gd flickr-post">
@@ -151,8 +150,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="col-md-4 sign-gd-two">
 						<h4>Download Mobile App</h4>
-                        <div></div>
-                        <div></div>
+                        <div class="linkimg">
+							<a href="{{ url ('/') }}"><img src="{{ asset ('/images/play-store.png') }}" width="100%" class="storeimg" height="width" alt="dpwnload on Play store"/></a>
+						</div><br/><br/>
+                        <div class="linkimg">
+							<a href="{{ url ('/') }}"><img src="{{ asset ('/images/app-store.png') }}" width="100%" class="storeimg" height="width" alt="dpwnload on Play store"/></a>
+						</div>
 						
 					</div>
 		</div>

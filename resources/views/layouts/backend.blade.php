@@ -23,6 +23,10 @@
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
 
+    <link href="{{asset('css/customer.css')}}" rel="stylesheet">
+
+    <link href="{{asset('css/w3.css')}}" rel="stylesheet">
+
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 
   </head>
