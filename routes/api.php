@@ -22,5 +22,6 @@ Route::post('login', 'APILoginController@login');
 Route::group(['middleware' => ['jwt.auth']], function() {
     Route::post('logout', 'APILoginController@logout');  //Logout
     Route::get('test', 'APIRegisterController@test'); //test
+    Route::get('getuserinfo/{id}', 'APILoginController@getUserDetails');//get user info
     Route::put('customer/{id}', 'APILoginController@postUpdate'); //Update Customer info
 });

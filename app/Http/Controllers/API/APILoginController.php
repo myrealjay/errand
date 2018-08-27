@@ -29,7 +29,7 @@ class APILoginController extends AppBaseController
             Config::set('auth.providers.users.model', \App\Customerinfo::class);*/
             // verify the credentials and create a token for the user
             if (! $token = JWTAuth::attempt($credentials)) {
-                return response()->json(['error' => 'invalid_credentials'], 401);
+                return response()->json(['error' => 'invalid_credentials'], 200);
             }
         } catch (JWTException $e) {
             return response()->json(['error' => 'could_not_create_token'], 500);
@@ -45,7 +45,12 @@ class APILoginController extends AppBaseController
 			'status' => 'success',
 			'message' => 'Logged out Successfully.'
 		  ], 200);
-	}
+    }
+    
+    public function getUserDetails($id){
+        $user = Customerinfo::find($id);
+        return response()->json(compact('user'));
+    }
 
     public function postUpdate(Request $request,$id ){
 
@@ -54,7 +59,7 @@ class APILoginController extends AppBaseController
            'l_name' => 'nullable|string',
            'phone_no' => 'nullable|numeric',
            'password' => 'nullable',
-           'email' => 'nullable|string|email|max:255|unique:customerinfos',
+           'email' => 'nullable|string|email|max:255',
         ]);
         if ($validator->fails()) {
             return response()->json($validator->errors());
