@@ -103,7 +103,7 @@ li.nav-item {
 .navbar-light .navbar-nav .nav-link {
     font-weight: 600;
     text-transform: capitalize;
-    color: rgb(190, 150, 170);
+    color: rgb(216, 216, 219);
     letter-spacing: 1px;
     padding: 0 0.5em;
 }
@@ -117,6 +117,7 @@ li.nav-item {
 	color:rgb(255, 255, 255);
 	background:transparent;
     border-radius: 5px;
+    text-decoration: underline;
 }
 
 .dropdown-item {
@@ -1672,6 +1673,24 @@ linkcl:hover {
     font-size:16px;
     font-weight: normal;
     font-style: normal;
+}
+.budast {
+    background-color: #eeeeff;
+    border-radius: 0 20px 0 0;
+}
+.cudast {
+    min-height:80vh;
+}
+.tiki {
+    font-weight: bold;
+}
+.darker {
+    background-color: #eeeeee;
+}
+.faqtop {
+    background-image: url('/images/bikers3.jpg');
+    background-size: cover;
+    min-height:20vh;
 }
 
 /* -- //Responsive code -- */

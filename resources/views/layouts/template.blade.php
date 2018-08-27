@@ -107,6 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="{{ url('/delivery') }}">Delivery Policy</a></li>
 							<li><a href="{{ url('/riferregistration') }}">Become a Rider</a></li>
 							<li><a href="{{ url('/blog') }}">Blog</a></li>
+							<li><a href="{{ url('/faq') }}">FAQs</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4 sign-gd flickr-post">

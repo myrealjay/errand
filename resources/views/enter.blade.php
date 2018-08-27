@@ -15,8 +15,8 @@
 						<div class="col-md-4 banner-grid2">
 							<div class="banner-subg1">
 							<span class="fa fa-globe" aria-hidden="true"></span>
-								<h3 class="mt-3">Errand Advantage</h3>
-								<p class="mt-3 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit estibulum nibh urna scing.consectetur adipiscing elit</p>
+								<h3 class="mt-3">Ease up messaging</h3>
+								<p class="mt-3 mb-3">You no longer have to worry about how to send packages over for personal or official errands</p>
 								
 								<div class="read-btn">
 									<a href="{{ url('/about') }}">Learn more</a>
@@ -26,8 +26,8 @@
 						<div class="col-md-4 banner-grid2">
 							<div class="banner-subg1">
 							<span class="fa fa-user" aria-hidden="true"></span>
-								<h3 class="mt-3">Secure transport</h3>
-								<p class="mt-3 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit estibulum nibh urna scing.consectetur adipiscing elit</p>
+								<h3 class="mt-3">Secure Delivery</h3>
+								<p class="mt-3 mb-3">With us your rest assured that your packages are in good hands and would be delivered to the right person just in time</p>
 								
 								<div class="read-btn">
 									<a href="{{ url('/about') }}">Learn more</a>
@@ -90,7 +90,7 @@
         <section class="wthree-row w3-about py-md-5">
 		<div class="container py-4 mt-2">
 			<h3 class="tittle-w3ls text-center mb-3">Steps in using ErrandPro.</h3>
-			<p class="tit text-center mx-auto">dpp hmmm</p>
+			<p class="tit text-center mx-auto">.</p>
               <div class="card-deck pt-4 mt-md-4">
 				  <div class="card">
                   <div id="phonei" >
@@ -139,7 +139,7 @@
 												<div class="clrx"></div>
 												<div class="linkcl"></div>
 												<div class="untouched"> 
-													details bla bla bla about the arrand app, dont forget the important details
+													Download our App from the google playstore. Register your profile and login to our platform
 												</div>
 												<div class="clrx"></div>
 											</div>
@@ -148,12 +148,12 @@
 
                         </div>
                         <div class="txts">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First and foremost step as follows
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select an errand
                         </div>
 												<div class="clrx"></div>
 												<div class="linkcl"></div>
 												<div class="untouched"> 
-													details bla bla bla about the arrand app, dont forget the important details
+													Enter your personal and credit card details and then Select an errand you want us to run on your behalf
 												</div>
 												<div class="clrx"></div>
 											</div>
@@ -162,12 +162,12 @@
 
                         </div>
                         <div class="txts">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First and foremost step as follows
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Choose your locations
                         </div>
 												<div class="clrx"></div>
 												<div class="linkcl"></div>
 												<div class="untouched"> 
-													details bla bla bla about the arrand app, dont forget the important details
+													Choose your preferred locations for pickup and delivery, time and date preference and all conditions you want met on delivery.
 												</div>
 												<div class="clrx"></div>
 											</div>
@@ -176,12 +176,12 @@
 
                         </div>
                         <div class="txts">
-														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First and foremost step as follows<br/>
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let us run your errand<br/>
                         </div>
 												<div class="clrx"></div>
 												<div class="linkcls"></div>
 												<div class="untouched"> 
-													details bla bla bla about the arrand app, dont forget the important details
+													Our errand professional will get to your location as fast as possible to run your errands, while you Spend your time on more productive endeavours
 												</div>
 												<div class="clrx"></div>
                       </div>
@@ -194,7 +194,7 @@
 	<section class="testimonials py-md-5">
 		<div class="container py-4 mt-2">
 			<h3 class="tittle-w3ls text-center mb-3 text-white">Happy clients</h3>
-				<p class="tit text-center mx-auto text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum, voluptatum possimus temporibus vel ab, nesciunt quod!</p>
+				<p class="tit text-center mx-auto text-white">Here are a few of our cients from different professional fields who love our services</p>
 
 			<div class="w3_agileits_testimonial_grids pt-4 mt-md-4">
 				<section class="slider">
@@ -203,32 +203,29 @@
 							<li>
 								<div class="w3_agileits_testimonial_grid">
 									<div class="test-bg-w3ls">
-										<h4>Odole Kayode <span>Lorem Ipsum</span></h4>
-										<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-										dolore eu fugiat nulla pariatur.</p>
+										<h4>Odole Kayode <span>Software Developer</span></h4>
+										<p>This quick delivery of all my food and drinks have really helped me to have as much fun as i always wanted my weekends to be.</p>
 									</div>
-									<img src="{{ asset ('images/ts1.jpg') }}" alt=" " class="img-responsive" />
+									<img src="{{ asset ('images/kay.jpg') }}" alt=" " class="img-responsive" />
 									
 								</div>
 							</li>
 							<li>
 								<div class="w3_agileits_testimonial_grid">
 									<div class="test-bg-w3ls">
-										<h4>Odole kayode <span>Lorem Ipsum</span></h4>
-										<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-										dolore eu fugiat nulla pariatur.</p>
+										<h4>Moniba Odunlami <span>Architect</span></h4>
+										<p>I never knew I could have all my meals from different eatries delivered to my doorstep in very little time.</p>
 									</div>
-									<img src="images/ts1.jpg" alt=" " class="img-responsive" />
+									<img src="images/moniba.jpg" alt=" " class="img-responsive" />
 								</div>
 							</li>
 							<li>
 								<div class="w3_agileits_testimonial_grid">
 									<div class="test-bg-w3ls">
-										<h4>Mario Andretti <span>Lorem Ipsum</span></h4>
-										<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-										dolore eu fugiat nulla pariatur.</p>
+										<h4>Mathew Oguntayo <span>Business Man</span></h4>
+										<p>I love this platform, it has helped me to be able to be able send all my products to my costumers without excess movements</p>
 									</div>
-									<img src="images/ts3.jpg" alt=" " class="img-responsive" />
+									<img src="images/mathew.jpg" alt=" " class="img-responsive" />
 								</div>
 							</li>
 						</ul>

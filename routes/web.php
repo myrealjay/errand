@@ -14,8 +14,8 @@
 Route::get('/', function () {
     return view('enter');
 });
-Route::get('/blog', function () {
-    return view('blog');
+Route::get('/faq', function () {
+    return view('faq');
 });
 
 
