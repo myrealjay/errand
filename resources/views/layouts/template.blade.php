@@ -149,8 +149,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="col-md-4 sign-gd-two">
 						<h4>Download Mobile App</h4>
-                        <div></div>
-                        <div></div>
+                        <div class="linkimg">
+							<a href="{{ url ('/') }}"><img src="{{ asset ('/images/play-store.png') }}" width="100%" class="storeimg" height="width" alt="dpwnload on Play store"/></a>
+						</div><br/><br/>
+                        <div class="linkimg">
+							<a href="{{ url ('/') }}"><img src="{{ asset ('/images/app-store.png') }}" width="100%" class="storeimg" height="width" alt="dpwnload on Play store"/></a>
+						</div>
 						
 					</div>
 		</div>

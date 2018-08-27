@@ -37,19 +37,19 @@
 						<div class="col-md-4 banner-btmg">
 							<div class="banner-btmg1">
 								<div class="form-text">
-									<h3 class="text-center">Get Delivery price</h3>
+									<h3 class="text-center">Get Estimate</h3>
 									<p class="text-center"></p>
 								</div>
 								<form action="#" method="post" class="banner_form">
 									<div class="sec-left">
 										<label class="contact-form-text">Pickup Point</label>
-										<input placeholder="Street Address or ZIP code " name="first name" type="text" required="">
+										<input placeholder="Enter pickup address " name="first name" type="text" required="">
 									</div>
 									<div class="sec-right">
 										<label class="contact-form-text">Delivery point</label>
-										<input placeholder="Street Address or ZIP code " name="first name" type="text" required="">
+										<input placeholder="Enter delivery adress " name="first name" type="text" required="">
 									</div>
-									<input type="submit" value="Check price">
+									<input type="submit" value="Calculate">
 								</form>
 							</div>
 					</div>
@@ -95,7 +95,7 @@
 				  <div class="card">
                   <div id="phonei" >
                       <div id="phonetop">
-                        <img src="/images/PhonetopG.png" width="100%" height="width" alt="reload to get usage tips" id="toppic"/>
+                        <img src="{{ asset ('/images/PhonetopG.png') }}" width="100%" height="width" alt="reload to get usage tips" id="toppic"/>
                       </div id="phonemid">
                         <div id=midpic>
                             <div class="banner-silder">
@@ -124,7 +124,7 @@
                             </div> 
                         </div> 
                      <div id="phonebuttom">
-                     <img src="/images/PhonebottomG.png" width="100%" height="width" alt="reload to get usage tips" id="buttompic"/>
+                     <img src="{{ asset ('/images/PhonebottomG.png') }}" width="100%" height="width" alt="reload to get usage tips" id="buttompic"/>
                       </div>
                  </div>
 				  </div>
@@ -216,7 +216,7 @@
 										<h4>Moniba Odunlami <span>Architect</span></h4>
 										<p>I never knew I could have all my meals from different eatries delivered to my doorstep in very little time.</p>
 									</div>
-									<img src="images/moniba.jpg" alt=" " class="img-responsive" />
+									<img src="{{ asset ('images/moniba.jpg') }}" alt=" " class="img-responsive" />
 								</div>
 							</li>
 							<li>
@@ -225,7 +225,7 @@
 										<h4>Mathew Oguntayo <span>Business Man</span></h4>
 										<p>I love this platform, it has helped me to be able to be able send all my products to my costumers without excess movements</p>
 									</div>
-									<img src="images/mathew.jpg" alt=" " class="img-responsive" />
+									<img src="{{ asset ('images/mathew.jpg') }}" alt=" " class="img-responsive" />
 								</div>
 							</li>
 						</ul>
@@ -236,14 +236,52 @@
 	</section>
 <!-- //testimonials -->
 <!-- smooth-shipping -->
-	<section class="wthree-row w3-about py-md-5">
+<section class="wthree-row w3-about py-md-5">
 		<div class="container py-4 mt-2">
-			<h3 class="tittle-w3ls text-center mb-3">Reasons why u Need Errand pro.</h3>
-			<p class="tit text-center mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum, voluptatum possimus temporibus vel ab, nesciunt quod!</p>
-			<div class="card-deck pt-4 mt-md-4">
-			</div>
-		</div>
-	</section>
+			<h3 class="tittle-w3ls text-center mb-3">Meet our trusted riders</h3>
+              <div class="card-deck pt-4 mt-md-4">
+				  <div class="card">
+						<div class="rimage">
+							<img src="{{ asset ('images/rider1.jpg') }}" class="dapo-img" width="100%" height="width" alt="Rider Image">
+						</div>
+						<button class="btn btn-light tiki2" type="button" data-toggle="collapse" data-target="#riderinfo" aria-expanded="false" aria-controls="errandquestion">
+								James Nwachukwu
+						</button>
+							<div class="collapse" id="riderinfo">
+									<div class="dapo-center">
+											James is a very trusted bike rider with over ten years experience as an okada man in Ikorodu Lagos and has always being faithfull to his passangers.
+									</div>
+							</div>
+				  </div>
+				  <div class="card">
+						<div class="rimage">
+							<img src="{{ asset ('images/rider2.jpg') }}" class="dapo-img" width="100%" height="width" alt="Rider Image">
+						</div>
+						<button class="btn btn-light tiki2" type="button" data-toggle="collapse" data-target="#riderinfo2" aria-expanded="false" aria-controls="errandquestion">
+								Yakubu Damilola
+						</button>
+							<div class="collapse" id="riderinfo2">
+									<div class="dapo-center">
+											Damilola is a very good bike rider from Abeokuta with five years experience as an okada man before relocating to Lagos and has always being faithfull to his passangers.
+									</div>
+							</div>
+				  </div>
+				  <div class="card">
+						<div class="rimage">
+							<img src="{{ asset ('images/rider3.jpg') }}" class="dapo-img" width="100%" height="width" alt="Rider Image">
+						</div>
+						<button class="btn btn-light tiki2" type="button" data-toggle="collapse" data-target="#riderinfo3" aria-expanded="false" aria-controls="errandquestion">
+								Ayodeji Adeyeri
+						</button>
+							<div class="collapse" id="riderinfo3">
+									<div class="dapo-center">
+											Ayodeji is a very trusted bike rider with over seven years experience as an okada man in Ikeja Lagos and has always being faithfull to his passangers.
+									</div>
+							</div>
+				  </div>
+				</div>
+            </div>
+        </section>
 <!-- //smooth-shipping -->
 <!-- distance -->
 
