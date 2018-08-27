@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('enter');
 });
+<<<<<<< HEAD
 
 Route::get('/test', function () {
     return view('test');
@@ -21,6 +22,10 @@ Route::get('/test', function () {
 
 Route::get('/blog', function () {
     return view('blog');
+=======
+Route::get('/faq', function () {
+    return view('faq');
+>>>>>>> 0f48f707dfb92a201e00990e232eb9df7da72060
 });
 
 Route::get('/google', function () {
