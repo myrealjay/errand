@@ -116,7 +116,7 @@
                 </div>
                 
                 <div class="subbtnd">
-                    <input type="submit" class="btn btn-primary subbtn" value="Send message">
+                    <input type="submit" class="btn btn-primary w3-button w3-indigo w3-border w3-border-white w3-round-large subbtn" value="Send message">
                 </div>
 
                 </form>

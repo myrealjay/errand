@@ -1773,13 +1773,13 @@ linkcl:hover {
     transition: 0.4s;
 }
 .linkimg:hover {
-    border:3px solid rgb(119, 120, 194);
+    border:3px solid rgb(152, 153, 204);
 }
 .storeimg {
     border-radius:7px;
 }
 .formcase{
-    background-color:#dde0ee;
+    background-color:#eeece8;
     box-shadow: 0 1px 2px 1px #000;
     width:90%;
     margin:auto;
@@ -1789,7 +1789,7 @@ linkcl:hover {
     border-radius: 10px;
 }
 .formcase:hover{
-    background-color:#ccd8ee;
+    background-color:#dfded9;
     box-shadow: 0 2px 5px 3px #000;
 }
 .impstyle {
