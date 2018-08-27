@@ -16,7 +16,7 @@ class CreateErrandTrackersTable extends Migration
         Schema::create('errand_trackers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('orderID');
-            $table->string('status')->default(0);
+            $table->string('status')->default(0); //1(Active),2(Completed)
             $table->string('driverID');
             $table->string('customerID');
             $table->timestamps();

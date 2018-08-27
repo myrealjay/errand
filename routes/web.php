@@ -78,3 +78,22 @@ Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay'); //Payst
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback'); //Paystack Payment
 
 Route::post('/payviacode', 'PaymentController@payViaCode')->name('paycode'); //Paystack Authorization code
+
+////////////////////////////////////////////////////////////////////////////////
+                 //      DRIVER'S ROUTES               //
+///////////////////////////////////////////////////////////////////////////////
+Route::get('/driver/login', 'DriversAuthController@getLogin');
+
+Route::post('/driver/login', 'DriversAuthController@postLogin'); 
+
+Route::get('/driver/register', 'DriversAuthController@getRegister');
+
+Route::post('/driver-logout','DriversFrontController@logout')->name('driver-logout');
+
+Route::get('/driver-logout','DriversFrontController@logout')->name('driver-logout');
+
+Route::get('/driver/dashboard','DriversFrontController@dashboard')->name('driverboard');
+
+Route::get('/driver/current','DriversFrontController@track');
+
+Route::get('/complete/{orderID}','DriversFrontController@updateTracker');
