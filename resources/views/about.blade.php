@@ -83,7 +83,7 @@
 	<p>&nbsp;</p>
 	<div class="container w3-center row">
 		<div class="col-sm-1"></div>
-		<div class="col-sm-2"><i class="fas fa-user font"></i><br>User friendly platform</div>
+		<div class="col-sm-2"><i class="fas fa-mobile font"></i><br>User friendly platform</div>
 		<div class="col-sm-2"><i class="fas fa-globe-africa font"></i><br>Secure and speedy deliveries</div>
 		<div class="col-sm-2"><i class="fas fa-credit-card font"></i><br>Easy payment system</div>
 		<div class="col-sm-2"><i class="fas fa-cog font"></i><br>Excellent customer support</div>
