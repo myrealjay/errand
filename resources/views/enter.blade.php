@@ -14,22 +14,22 @@
 					
 						<div class="col-md-4 banner-grid2">
 							<div class="banner-subg1">
-							<span class="fa fa-globe" aria-hidden="true"></span>
-								<h3 class="mt-3">Ease up messaging</h3>
-								<p class="mt-3 mb-3">You no longer have to worry about how to send packages over for personal or official errands</p>
+							<span class="fa fa-shield" aria-hidden="true"></span>
+								<h3 class="mt-3">Secure Delivery</h3>
+								<p class="mt-3 mb-3">With us your rest assured that your packages are in good hands and would be delivered on time.</p>
 								
-								<div class="read-btn">
+								<div class="btn btn-primary w3-button w3-indigo w3-border w3-border-white w3-round-large">
 									<a href="{{ url('/about') }}">Learn more</a>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-4 banner-grid2">
 							<div class="banner-subg1">
-							<span class="fa fa-user" aria-hidden="true"></span>
-								<h3 class="mt-3">Secure Delivery</h3>
-								<p class="mt-3 mb-3">With us your rest assured that your packages are in good hands and would be delivered to the right person just in time</p>
+							<span class="fa fa-money" aria-hidden="true"></span>
+								<h3 class="mt-3">Affordable transport</h3>
+								<p class="mt-3 mb-3"> You don't have to worry too much about your pocket while trying to get that important parcel delivered.</p>
 								
-								<div class="read-btn">
+								<div class="btn btn-primary w3-button w3-indigo w3-border w3-border-white w3-round-large">
 									<a href="{{ url('/about') }}">Learn more</a>
 								</div>
 							</div>
@@ -49,7 +49,7 @@
 										<label class="contact-form-text">Delivery point</label>
 										<input placeholder="Enter delivery adress " name="first name" type="text" required="">
 									</div>
-									<input type="submit" value="Calculate">
+									<input type="submit" class="btn btn-primary w3-button w3-indigo w3-border w3-border-white w3-round-large" value="Calculate">
 								</form>
 							</div>
 					</div>
