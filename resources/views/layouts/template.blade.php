@@ -109,6 +109,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="{{ url('/riferregistration') }}">Become a Rider</a></li>
 							<li><a href="{{ url('/blog') }}">Blog</a></li>
 							<li><a href="{{ url('/faq') }}">FAQs</a></li>
+							<li><a href="{{ url('/driver/login') }}">Driver's Login</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4 sign-gd flickr-post">
@@ -161,7 +162,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	</section><!--Waiting for website address by Dapo-->
-	<p class="copy-right py-3">&copy 2018 Errand pro Ltd. Powered by <a href="http://errand.com/">OKB and Associater</a></p>
+	<p class="copy-right py-3">&copy 2018 Errand pro Ltd. Powered by <a href="http://errand.com/">OKB and Associates</a></p>
 	<!-- //footer -->
 </footer>
 <!-- Modal -->

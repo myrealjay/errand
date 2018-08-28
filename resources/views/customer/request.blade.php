@@ -12,11 +12,18 @@
                     {{ session()->get('message') }}
                 </div>
                 @endif
+                @if(session()->has('notice'))
+                <div class="alert alert-info">
+                    {{ session()->get('notice') }}
+                </div>
+                @else
                 <select class="form-control" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
                     <option value="">Select Trip Type</option>
                     <option value="/singleway">One-way/Two-way Trip</option>
                     <option value="/multiway">Multi-way Trip</option>
                 </select>
+                @endif
+                
             </div>
         </div>
     </div>

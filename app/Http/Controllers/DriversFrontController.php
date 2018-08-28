@@ -55,4 +55,18 @@ class DriversFrontController extends Controller
         return redirect()->back()->with('message','Successfully Completed the Trip...');
     }
 
+    public function logs(){
+     $driver = Session::get('driver_id');
+     $tracker = \App\ErrandTracker::where(['status'=>2,'driverID'=>$driver])->paginate(10);
+        //dd($tracker);
+     return view ('driverboard.logs',compact('tracker'));
+    }
+
+    public function profile(){
+        $id = Session::get('driver_id');
+        $user = Driver::find($id);
+        //dd($driver);
+        return view('driverboard.profile',compact('user'));
+    }
+
 }

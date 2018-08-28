@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-	<p style="text-align:center"> CURRENT OFFERINGS </p>
+	<p style="text-align:center"> CURRENT TASK </p>
   @if($tracker->count() > 0)      
   <table class="table">
     <thead>

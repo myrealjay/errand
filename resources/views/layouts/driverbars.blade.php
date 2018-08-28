@@ -13,39 +13,21 @@
             </li>
             <li class="breadcrumb-item active">Overview</li>
           </ol>
-          <ol class="breadcrumb" style="display:{{ Request::is('customer/request*') ? '' : 'none' }}">
+          <ol class="breadcrumb" style="display:{{ Request::is('driver/current*') ? '' : 'none' }}">
             <li class="breadcrumb-item">
-              <a href="{{url('/customer/request')}}">Make a Request</a>
+              <a href="{{url('/driver/current')}}">Current Task</a>
             </li>
             <li class="breadcrumb-item active">Overview</li>
           </ol>
-          <ol class="breadcrumb" style="display:{{ Request::is('customer/track*') ? '' : 'none' }}">
+          <ol class="breadcrumb" style="display:{{ Request::is('driver/logs*') ? '' : 'none' }}">
             <li class="breadcrumb-item">
-              <a href="{{url('/customer/track')}}">Track Your Requests</a>
+              <a href="{{url('/driver/logs')}}">Track Your Logs</a>
             </li>
             <li class="breadcrumb-item active">Overview</li>
           </ol>
-          <ol class="breadcrumb" style="display:{{ Request::is('customer/logs*') ? '' : 'none' }}">
+          <ol class="breadcrumb" style="display:{{ Request::is('driver/profile*') ? '' : 'none' }}">
             <li class="breadcrumb-item">
-              <a href="{{url('/customer/logs')}}"> Errand Logs</a>
-            </li>
-            <li class="breadcrumb-item active">Overview</li>
-          </ol>
-          <ol class="breadcrumb" style="display:{{ Request::is('customer/update*') ? '' : 'none' }}">
-            <li class="breadcrumb-item">
-              <a href="{{url('/customer/update')}}"> Update Your Profile </a>
-            </li>
-            <li class="breadcrumb-item active">Overview</li>
-          </ol>
-          <ol class="breadcrumb" style="display:{{ Request::is('singleway*') ? '' : 'none' }}">
-            <li class="breadcrumb-item">
-              <a href="{{url('/singleway')}}"> Single-way Request </a>
-            </li>
-            <li class="breadcrumb-item active">Overview</li>
-          </ol>
-          <ol class="breadcrumb" style="display:{{ Request::is('multiway*') ? '' : 'none' }}">
-            <li class="breadcrumb-item">
-              <a href="{{url('/multiway')}}"> Multi-way Request </a>
+              <a href="{{url('/driver/profile')}}"> Your Profile</a>
             </li>
             <li class="breadcrumb-item active">Overview</li>
           </ol>

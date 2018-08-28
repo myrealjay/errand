@@ -11,10 +11,10 @@
                   <div class="card-body-icon">
                     <i class="fas fa-fw fa-comments"></i>
                   </div>
-                  <div class="mr-5">26 New Messages!</div>
+                  <div class="mr-5">Blog</div>
                 </div>
-                <a class="card-footer text-white clearfix small z-1" href="#">
-                  <span class="float-left">View Details</span>
+                <a class="card-footer text-white clearfix small z-1" href="{{url('/blog')}}">
+                  <span class="float-left">View Blog</span>
                   <span class="float-right">
                     <i class="fas fa-angle-right"></i>
                   </span>
@@ -27,10 +27,10 @@
                   <div class="card-body-icon">
                     <i class="fas fa-fw fa-list"></i>
                   </div>
-                  <div class="mr-5">11 New Tasks!</div>
+                  <div class="mr-5">Request an Errand </div>
                 </div>
-                <a class="card-footer text-white clearfix small z-1" href="#">
-                  <span class="float-left">View Details</span>
+                <a class="card-footer text-white clearfix small z-1" href="{{url('/customer/request')}}">
+                  <span class="float-left">Request</span>
                   <span class="float-right">
                     <i class="fas fa-angle-right"></i>
                   </span>
@@ -43,9 +43,9 @@
                   <div class="card-body-icon">
                     <i class="fas fa-fw fa-shopping-cart"></i>
                   </div>
-                  <div class="mr-5">123 New Orders!</div>
+                  <div class="mr-5">Track Your Request</div>
                 </div>
-                <a class="card-footer text-white clearfix small z-1" href="#">
+                <a class="card-footer text-white clearfix small z-1" href="{{url('/customer/track')}}">
                   <span class="float-left">View Details</span>
                   <span class="float-right">
                     <i class="fas fa-angle-right"></i>
@@ -59,9 +59,9 @@
                   <div class="card-body-icon">
                     <i class="fas fa-fw fa-life-ring"></i>
                   </div>
-                  <div class="mr-5">13 New Tickets!</div>
+                  <div class="mr-5">Your Errand Logs</div>
                 </div>
-                <a class="card-footer text-white clearfix small z-1" href="#">
+                <a class="card-footer text-white clearfix small z-1" href="{{url('/customer/logs')}}">
                   <span class="float-left">View Details</span>
                   <span class="float-right">
                     <i class="fas fa-angle-right"></i>

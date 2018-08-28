@@ -127,6 +127,12 @@ class CustomersFrontController extends Controller
     }
 
     public function getRequest(){
+        //Getting the Driver
+        $check = \App\Models\Driver::where('status',0)->get();
+        if ($check->count() == 0) {
+            Session::flash('notice', 'All drivers are engaged at the moment....Pls try again in 30 mins'); 
+            return view ('customer.request');
+        }
 
         return view ('customer.request');
 
@@ -147,14 +153,13 @@ class CustomersFrontController extends Controller
     public function update(){
 
         $id = Session::get('loggedin');
-         $user = Customerinfo::find($id);
-         //dd($user);
+        $user = Customerinfo::find($id);
+         
         return view ('customer.update',compact('user'));
 
     }
 
     public function postUpdate(Request $request){
-        //dd($request->all());
 
        $input = $request->except(['password']);
        
@@ -167,6 +172,5 @@ class CustomersFrontController extends Controller
         $users->update($input);
 
        return redirect()->back()->with('message','Your Profile has been successfully updated.');
-
     }
 }

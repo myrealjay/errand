@@ -101,3 +101,7 @@ Route::get('/driver/dashboard','DriversFrontController@dashboard')->name('driver
 Route::get('/driver/current','DriversFrontController@track');
 
 Route::get('/complete/{orderID}','DriversFrontController@updateTracker');
+
+Route::get('/driver/logs','DriversFrontController@logs');
+
+Route::get('/driver/profile','DriversFrontController@profile');
