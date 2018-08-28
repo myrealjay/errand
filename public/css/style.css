@@ -1363,8 +1363,8 @@ li.nav-item {
     color: #fff;
 }
 .navbar-light .navbar-toggler {
-    border-color:#483D8C ;
-    background:#483D8C ;
+    border-color:#3B78E7 ;
+    background:#3B78E7 ;
     padding: 2px 6px;
     margin-top: 5px;
     outline: none;
@@ -1379,7 +1379,7 @@ li.nav-item {
     -ms-transition: 0.5s all;
 }
 .navbar-light .navbar-toggler:hover {
-    background:#2b0570 ;
+    background:rgb(51, 102, 197) ;
 }
 .dropdown-menu.show {
     text-align: center;
@@ -1850,6 +1850,15 @@ linkcl:hover {
 }
 .justice:p {
     text-align: justify;
+}
+.media-links{
+    text-align: center;
+}
+.media-links li {
+    display:inline-block
+}
+.fonticon {
+    font-size: 200%;
 }
 
 /* -- //Responsive code -- */

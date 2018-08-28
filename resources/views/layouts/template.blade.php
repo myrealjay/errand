@@ -129,12 +129,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div><br/><br/>
                         <div class="linkimg">
 							<a href="{{ url ('/') }}"><img src="{{ asset ('/images/app-store.png') }}" width="100%" class="storeimg" height="width" alt="dpwnload on Play store"/></a>
-						</div>
-						<div class="">
+						</div><br/>
+						<div class="media-links">
 							<ul>
-								<li>ggg</li>
-								<li>kkk</li>
-								<li>lll</li>
+								<li><a href="{{ url ('/') }}"><span class="fa fa-facebook fonticon"  aria-hidden="true"></span></a></li>&nbsp;
+								<li><a href="{{ url ('/') }}"><span class="fa fa-twitter fonticon"  aria-hidden="true"></span></a></li>&nbsp;
+								<li><a href="{{ url ('/') }}"><span class="fa fa-instagram fonticon"  aria-hidden="true"></span></a></li>&nbsp;
+								<li><a href="{{ url ('/') }}"><span class="fa fa-google-plus fonticon"  aria-hidden="true"></span></a></li>
 							</ul>
 						</div>
 					</div>
