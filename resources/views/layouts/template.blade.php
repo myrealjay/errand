@@ -18,11 +18,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			window.scrollTo(0, 1);
 		}
 	</script>
-	<!-- //for-mobile-apps -->
+	
 	 <link href="{{ URL::asset('css/bootstrap.css') }}" type="text/css" rel="stylesheet" media="all">
-	<!--banner slider  -->
+	
 	<link href="{{ URL::asset('css/JiSlider.css') }}" rel="stylesheet">
-	<!-- //banner-slider -->
+	
 	<link rel="stylesheet" href="{{ URL::asset('css/flexslider.css') }}" type="text/css" media="screen" property="" />
 	 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
@@ -33,18 +33,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 
 <body>
-	<!-- header -->
+	
 	<section class="errand-header py-2">
 		<div class="container">
-			  <!-- header -->
+			  
         <header>
                 <nav class="navbar navbar-expand-lg navbar-light bg-gradient-secondary">
 
                     <h1>
-                        <a class="navbar-brand" href="{{url('/')}}">
-                          ErrandPro 
-                            
-                        </a>
+                        <a class="navbar-brand" href="{{url('/')}}">ErrandPro</a>
                     </h1>
                     <button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -64,43 +61,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 </nav>
         </header>
-        <!-- //header -->
+        
 
 		</div>
 	</section>
-	<!-- //header -->
+	
 
         @yield('content')
 
 	<!-- footer -->
 <footer>
 	<section class="footer py-md-5">
-		<div class="container py-3 mt-2">
+		<div class="container py-4 mt-2">
 		<div class="row footer_inner_info_w3ls_agileits">
-			<!--<div class="col-md-3 footer-left">
-				<h2><a href="index.html"> Shipping</a></h2>
-				<p class="mb-3 mt-3">Lorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.</p>
-				
-                <ul class="social-nav footer-social social two">
-					<li>
-						<a href="#">
-							<i class="fa fa-facebook-f" aria-hidden="true"></i>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="fa fa-instagram" aria-hidden="true"></i>
-						</a>
-					</li>
-				</ul>
-			</div>-->
+			<div class="col-md-3 sign-gd justice">
+				<a href="{{url('/')}}"><h4>ErrandPro</h4></a>
+				<p class="mb-3 mt-3">Errandpro is your professional personal assistant. We help you run errands so you can focus on whatís important. Errandpro is your go to errand service provider.</p>
+			</div>
 			
-					<div class="col-md-4 sign-gd">
+					<div class="col-md-3 sign-gd">
 						<h4>Know us</h4>
 						<ul>
 							<li><a href="{{ url('/about') }}">About Us</a></li>
@@ -112,7 +91,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="{{ url('/driver/login') }}">Driver's Login</a></li>
 						</ul>
 					</div>
-					<div class="col-md-4 sign-gd flickr-post">
+					<div class="col-md-3 sign-gd flickr-post">
 						<h4>Contact us</span></h4>
 						<div class="address">
 							<div class="address-grid">
@@ -120,8 +99,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<i class="fa fa-phone" aria-hidden="true"></i>
 								</div>
 								<div class="address-right">
-									<h6>Phone Number</h6>
-									<p>+1 234 567 8901</p>
+									<h6>+1 234 567 8901</h6>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -130,8 +108,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<i class="fa fa-envelope" aria-hidden="true"></i>
 								</div>
 								<div class="address-right">
-									<h6>Email Address</h6>
-									<p>Email :<a href="mailto:info@okbestate.com"> Info@okbestate.com</a></p>
+									<h6><a href="mailto:info@okbestate.com"> Info@okbestate.com</a></h6>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -140,55 +117,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<i class="fa fa-map-marker" aria-hidden="true"></i>
 								</div>
 								<div class="address-right">
-									<h6>Location</h6>
-									<p>18 Lanre Awolokun street Gbagada express way.
-
-									</p>
+									<h6>18 Lanre Awolokun street Gbagada express way.</h6>
 								</div>
 								
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 sign-gd-two">
-						<h4>Download Mobile App</h4>
+					<div class="col-md-3 sign-gd-two">
+						<center><h4>Download Mobile App</h4></center>
                         <div class="linkimg">
 							<a href="{{ url ('/') }}"><img src="{{ asset ('/images/play-store.png') }}" width="100%" class="storeimg" height="width" alt="dpwnload on Play store"/></a>
 						</div><br/><br/>
                         <div class="linkimg">
 							<a href="{{ url ('/') }}"><img src="{{ asset ('/images/app-store.png') }}" width="100%" class="storeimg" height="width" alt="dpwnload on Play store"/></a>
+						</div><br/>
+						<div class="media-links">
+							<ul>
+								<li><a href="{{ url ('/') }}"><span class="fa fa-facebook fonticon"  aria-hidden="true"></span></a></li>&nbsp;
+								<li><a href="{{ url ('/') }}"><span class="fa fa-twitter fonticon"  aria-hidden="true"></span></a></li>&nbsp;
+								<li><a href="{{ url ('/') }}"><span class="fa fa-instagram fonticon"  aria-hidden="true"></span></a></li>&nbsp;
+								<li><a href="{{ url ('/') }}"><span class="fa fa-google-plus fonticon"  aria-hidden="true"></span></a></li>
+							</ul>
 						</div>
-						
 					</div>
 		</div>
 	</div>
 	</section><!--Waiting for website address by Dapo-->
-	<p class="copy-right py-3">&copy 2018 Errand pro Ltd. Powered by <a href="http://errand.com/">OKB and Associates</a></p>
+	<p class="copy-right py-3">&copy 2018 Errand pro Limited</p>
 	<!-- //footer -->
 </footer>
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Shipping</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-					<div class="agileits-errand-info">
-						<img src="images/g1.jpg" class="img-fluid" alt="" />
-						<p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac rhoncus risus odio eget nunc. Pellentesque ac fermentum diam. Integer eu facilisis nunc, a iaculis felis. Pellentesque pellentesque tempor enim, in dapibus turpis porttitor quis. </p>
-					</div>
-				</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- //Modal -->
+
 
 	<!-- js -->
 	<script src="js/jquery-2.2.3.min.js"></script>
