@@ -12,8 +12,8 @@ p {
     font-size: 15px;
     line-height: 1.8;
 }
-
-.frm, .frm a{
+/*dapo removed .frm a*/
+.frm, {
     background: #483D8C;
     color: #FFFFFF;
 }
@@ -1860,17 +1860,18 @@ linkcl:hover {
     font-size: 200%;
 }
 .formbg {
-    background-color: #6f8fb9;
+    background-color: #6f8fb9b6;
     padding:10px;
     border:7px solid #3B78E7;
     border-radius: 15px;
     transition: 0.2s;
 }
 .formbg:hover {
-    border:7px solid #ffffff;
+    border:7px solid rgb(181, 207, 255);
 }
 .linkreg{
-    background-color:#6f8fb9;
+    color:#fff;
+    background-color:#6f8fb9b6;
     transition: 0.4s;
 }
 .linkreg:hover{
@@ -1878,5 +1879,8 @@ linkcl:hover {
 }
 .font-response:hover {
     color:#cacaca;
+}
+.boldm{
+    font-weight: bold;
 }
 /* -- //Responsive code -- */

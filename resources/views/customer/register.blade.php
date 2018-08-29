@@ -11,7 +11,7 @@
                     <!--
                 <div class="panel-body w3-panel w3-border w3-round-xlarge w3-border-indigo frm  w3-topbar w3-bottombar w3-rightbar w3-leftbar w3-hover-border-sand">-->
                 <div class="frm w3-panel formbg">    
-                    <h3 class="text-center">Customer Registration</h3>
+                    <h3 class="text-center boldm">Customer Registration</h3>
                         @if(session()->has('message'))
                         <div class="alert alert-success">
                             {{ session()->get('message') }}
@@ -30,7 +30,7 @@
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('f_name') ? ' has-error' : '' }}">
-                            <label for="f_name" class="col-md-12 control-label">First Name</label>
+                            <label for="f_name" class="col-md-12 control-label boldm">First Name</label>
 
                             <div class="col-md-12">
                                 <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}" required autofocus>
@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('l_name') ? ' has-error' : '' }}">
-                            <label for="l_name" class="col-md-12 control-label">Last Name</label>
+                            <label for="l_name" class="col-md-12 control-label boldm">Last Name</label>
 
                             <div class="col-md-12">
                                 <input id="l_name" type="text" class="form-control" name="l_name" value="{{ old('l_name') }}" required autofocus>
@@ -58,7 +58,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('phone_no') ? ' has-error' : '' }}">
-                            <label for="phone_no" class="col-md-12 control-label">Phone Number</label>
+                            <label for="phone_no" class="col-md-12 control-label boldm">Phone Number</label>
 
                             <div class="col-md-12">
                                 <input id="phone_no" type="text" class="form-control" name="phone_no" value="{{ old('phone_no') }}" required autofocus>
@@ -72,7 +72,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-12 control-label">E-Mail Address</label>
+                            <label for="email" class="col-md-12 control-label boldm">E-Mail Address</label>
 
                             <div class="col-md-12">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
@@ -86,7 +86,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-12 control-label">Password</label>
+                            <label for="password" class="col-md-12 control-label boldm">Password</label>
 
                             <div class="col-md-12">
                                 <input id="password" type="password" class="form-control" name="password" required>
@@ -100,7 +100,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="col-md-12 control-label">Confirm Password</label>
+                            <label for="password-confirm" class="col-md-12 control-label boldm">Confirm Password</label>
 
                             <div class="col-md-12">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>

@@ -8,15 +8,14 @@
         <div class="col-md-6 col-md-offset-2">
             <div class="panel panel-primary">
                 <div class="panel-heading"></div>
-
-                <div class="panel-body frm w3-panel w3-border w3-round-xlarge w3-border-deep-purple w3-topbar w3-bottombar w3-rightbar w3-leftbar w3-hover-border-sand">
-                    <!--a href="#" onclick="toggle('MAY')" >MAY</a>
-                        <a href="#" onclick="toggle('JUNE')" >JUNE</a-->
-                            <h3 class="text-center">Driver's Login</h3>
+                    <!--
+                <div class="panel-body frm w3-panel w3-border w3-round-xlarge w3-border-deep-purple w3-topbar w3-bottombar w3-rightbar w3-leftbar w3-hover-border-sand">-->
+                <div class="frm w3-panel formbg"> 
+                            <h3 class="text-center boldm">Driver's Login</h3>
                             <div class="text-center">
                                 <!--::::::::::THE LOGIN BUTTON::::::::::::-->
-                                <button class="frm w3-btn w3-border w3-border-white" onclick="toggle('MAY')">Login with email</button>
-                                <button class="frm w3-btn w3-border w3-border-white" onclick="toggle('JUNE')">Login with phone</button>
+                                <button class="frm w3-btn w3-border w3-border-white boldm" onclick="toggle('MAY')">Login with email</button>
+                                <button class="frm w3-btn w3-border w3-border-white boldm" onclick="toggle('JUNE')">Login with phone</button>
                             </div>
                             <p>&nbsp;</p>
                             @if(session()->has('message'))
@@ -38,7 +37,7 @@
                                     {{ csrf_field() }}
 
                                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                        <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                                        <label for="email" class="col-md-4 control-label boldm">E-Mail Address</label>
 
                                         <div class="col-md-12">
                                             <input id="email" type="text" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
@@ -52,7 +51,7 @@
                                     </div>
 
                                     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                        <label for="password" class="col-md-4 control-label">Password</label>
+                                        <label for="password" class="col-md-4 control-label boldm">Password</label>
 
                                         <div class="col-md-12">
                                             <input id="password" type="password" class="form-control" name="password" required>
@@ -77,7 +76,7 @@
 
                                     <div class="form-group">
                                         <div class="col-md-8 col-md-offset-4">
-                                            <button type="submit" class="btn btn-primary w3-button w3-indigo w3-border w3-border-white w3-round-large">
+                                            <button type="submit" class="btn btn-primary w3-button w3-blue w3-border w3-border-white w3-round-large">
                                                 Login
                                             </button>
 
