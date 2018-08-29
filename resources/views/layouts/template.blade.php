@@ -77,7 +77,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container py-4 mt-2">
 		<div class="row footer_inner_info_w3ls_agileits">
 			<div class="col-md-3 sign-gd justice">
-				<a href="{{url('/')}}"><h4>ErrandPro</h4></a>
+				<a href="{{url('/')}}"><img src="{{ asset ('/images/logo.png') }}" height="width" width="100px" alt="LOGO." /></a>
 				<p class="mb-3 mt-3">Errandpro is your professional personal assistant. We help you run errands so you can focus on whatís important. Errandpro is your go to errand service provider.</p>
 			</div>
 			
