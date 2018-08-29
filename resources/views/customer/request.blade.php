@@ -11,8 +11,7 @@
                 <div class="alert alert-success">
                     {{ session()->get('message') }}
                 </div>
-                @endif
-                @if(session()->has('notice'))
+                @elseif(session()->has('notice'))
                 <div class="alert alert-info">
                     {{ session()->get('notice') }}
                 </div>
