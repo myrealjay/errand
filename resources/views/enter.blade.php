@@ -39,16 +39,23 @@
 									<h3 class="text-center">Get Estimate</h3>
 									<p class="text-center"></p>
 								</div>
-								<form action="#" method="post" class="banner_form">
+								@if(session()->has('price'))
+                        		<div class="alert alert-info">
+                            		{{ session()->get('price') }}&#x20a6;
+                        		</div>
+                        		@endif
+                        		<div class="alert alert-info" style="display:none" value="&#x20a6;"></div>
+								<form action="{{url('/estimate')}}" method="post" class="banner_form">
+									{{csrf_field()}}
 									<div class="sec-left">
 										<label class="contact-form-text">Pickup Point</label>
-										<input placeholder="Enter pickup address " name="first name" type="text" required="">
+										<input placeholder="Enter pickup address " name="from_location" type="text" id="from_location" required="">
 									</div>
 									<div class="sec-right">
-										<label class="contact-form-text">Delivery point</label>
-										<input placeholder="Enter delivery adress " name="first name" type="text" required="">
+										<label class="contact-form-text">Delivery Point</label>
+										<input placeholder="Enter delivery adress " name="to_location" type="text" id="to_location" required="">
 									</div>
-									<input type="submit" class="btn btn-primary w3-button w3-blue w3-border w3-border-white w3-round-large" value="Calculate">
+									<input type="submit" class="btn btn-primary w3-button w3-blue w3-border w3-border-white w3-round-large" value="Calculate" id="ajaxSubmit">
 								</form>
 							</div>
 					</div>

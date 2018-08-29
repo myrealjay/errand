@@ -35,6 +35,10 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/tested', function () {
+    return view('tests');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -42,6 +46,8 @@ Route::get('/home', 'HomeController@index');
 Route::get('/customer/login', 'CustomersAuthController@getLogin');
 
 Route::post('/customer/login', 'CustomersAuthController@postLogin'); 
+
+Route::post('/estimate', 'CustomersAuthController@postRequest');
 
 Route::get('/customer/register', 'CustomersAuthController@getRegister');
 

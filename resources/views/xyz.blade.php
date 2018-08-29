@@ -27,7 +27,7 @@
 
     <link href="{{asset('css/w3.css')}}" rel="stylesheet">
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&key=AIzaSyCy4AGMeMLvNWcVq5qjPjIu5cBaQr8QECE"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 
   </head>
 
@@ -169,12 +169,12 @@
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
     <!-- Google Map plotting API -->
-    <script>
+     <script>
       function initMap() {
         var directionsService = new google.maps.DirectionsService;
         var directionsDisplay = new google.maps.DirectionsRenderer;
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
+          zoom: 7,
           center: {lat: 6.465422, lng: 3.406448}
         });
         directionsDisplay.setMap(map);
@@ -201,10 +201,11 @@
         });
       }
     </script>
-    <script async defer
+    <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy4AGMeMLvNWcVq5qjPjIu5cBaQr8QECE&callback=initMap">
-    </script>
+    </script> 
 
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
   </body>
 
 </html>

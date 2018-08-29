@@ -30,6 +30,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="//fonts.googleapis.com/css?family=Rubik:400,500,700,900" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
 
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
+	<meta name="_token" content="{{csrf_token()}}" />
+
 </head>
 
 <body>
@@ -199,6 +203,51 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			$('.counter').countUp();
 		</script>
 <!-- //stats -->
+    <!-- Google API script -->
+    <script>
+        function initialize() {
+        var input = document.getElementById('from_location');
+        new google.maps.places.Autocomplete(input);
+      }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <script>
+        function initialize() {
+        var input = document.getElementById('to_location');
+        new google.maps.places.Autocomplete(input);
+      }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+   <!-- The Estimator Price -->
+    <!-- <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+               integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+               crossorigin="anonymous">
+      </script> -->
+      <script>
+         jQuery(document).ready(function(){
+            jQuery('#ajaxSubmit').click(function(e){
+               e.preventDefault();
+               $.ajaxSetup({
+                  headers: {
+                      'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                  }
+              });
+               jQuery.ajax({
+                  url: "{{ url('/estimate') }}",
+                  method: 'post',
+                  data: {
+                     from_location: jQuery('#from_location').val(),
+                     to_location: jQuery('#to_location').val()
+                  },
+                  success: function(result){
+                     jQuery('.alert').show();
+                     jQuery('.alert').html(result.success);
+                  }});
+               });
+            });
+      </script>
 
 	<!-- smooth-scrolling-of-move-up -->
 	
@@ -207,6 +256,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	 <script src="js/bootstrap.js"></script>
+	 
 </body>
 
 </html>
