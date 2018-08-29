@@ -8,8 +8,9 @@
         <div class="col-md-4 col-md-offset-2">
             <div class="panel panel-primary">
                 <div class="panel-heading"></div>
-
-                <div class="panel-body w3-panel w3-border w3-round-xlarge w3-border-indigo frm  w3-topbar w3-bottombar w3-rightbar w3-leftbar w3-hover-border-sand">
+                    <!--
+                <div class="panel-body w3-panel w3-border w3-round-xlarge w3-border-indigo frm  w3-topbar w3-bottombar w3-rightbar w3-leftbar w3-hover-border-sand">-->
+                <div class="frm w3-panel formbg">    
                     <h3 class="text-center">Customer Registration</h3>
                         @if(session()->has('message'))
                         <div class="alert alert-success">
@@ -108,7 +109,7 @@
 
                         <div class="form-group">
                             <div class="col-md-12 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary w3-button w3-indigo w3-border w3-border-white w3-round-large">
+                                <button type="submit" class="btn btn-primary w3-button w3-blue w3-border w3-border-white w3-round-large">
                                     Register
                                 </button>
                             </div>

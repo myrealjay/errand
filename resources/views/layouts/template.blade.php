@@ -24,7 +24,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="{{ URL::asset('css/JiSlider.css') }}" rel="stylesheet">
 	
 	<link rel="stylesheet" href="{{ URL::asset('css/flexslider.css') }}" type="text/css" media="screen" property="" />
-	 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
 	<link href="{{ URL::asset('css/w3.css') }}" rel="stylesheet" type="text/css" media="all" />
 	<link href="//fonts.googleapis.com/css?family=Rubik:400,500,700,900" rel="stylesheet">
@@ -45,7 +45,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <nav class="navbar navbar-expand-lg navbar-light bg-gradient-secondary">
 
                     <h1>
-                        <a class="navbar-brand" href="{{url('/')}}">ErrandPro</a>
+						<a class="navbar-brand" href="{{url('/')}}">
+							<img src="{{ asset ('/images/logo.png') }}" height="width" width="100px" alt="LOGO." />
+						</a>
                     </h1>
                     <button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -140,7 +142,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a href="{{ url ('/') }}"><span class="fa fa-facebook fonticon"  aria-hidden="true"></span></a></li>&nbsp;
 								<li><a href="{{ url ('/') }}"><span class="fa fa-twitter fonticon"  aria-hidden="true"></span></a></li>&nbsp;
 								<li><a href="{{ url ('/') }}"><span class="fa fa-instagram fonticon"  aria-hidden="true"></span></a></li>&nbsp;
-								<li><a href="{{ url ('/') }}"><span class="fa fa-google-plus fonticon"  aria-hidden="true"></span></a></li>
+								<li><a href="{{ url ('/') }}"><span class="fa fa-linkedin fonticon"  aria-hidden="true"></span></a></li>
 							</ul>
 						</div>
 					</div>

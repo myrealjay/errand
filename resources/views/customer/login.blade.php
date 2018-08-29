@@ -16,10 +16,9 @@
         <div class="col-md-4 col-md-offset-2">
             <div class="panel panel-primary">
                 <div class="panel-heading"></div>
-
-                <div class="panel-body frm w3-panel w3-border w3-round-xlarge w3-border-deep-purple w3-topbar w3-bottombar w3-rightbar w3-leftbar w3-hover-border-sand">
-                    <!--a href="#" onclick="toggle('MAY')" >MAY</a>
-                        <a href="#" onclick="toggle('JUNE')" >JUNE</a-->
+                    <!--
+                <div class="panel-body frm w3-panel w3-border w3-round-xlarge w3-border-deep-purple w3-topbar w3-bottombar w3-rightbar w3-leftbar w3-hover-border-sand">-->
+                <div class="frm w3-panel formbg">
                             <h3 class="text-center">Customer Login</h3>
                             <div class="text-center">
                                 <!--::::::::::THE LOGIN BUTTON::::::::::::-->
@@ -82,16 +81,19 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <!--dapo's edits-->
                                     <div class="form-group">
                                         <div class="col-md-8 col-md-offset-4">
-                                            <button type="submit" class="btn btn-primary w3-button w3-indigo w3-border w3-border-white w3-round-large">
-                                                Login
-                                            </button>
-
-                                            <a class="btn btn-link" href="{{ route('password.request') }}">
-                                                Forgot Your Password?
-                                            </a>
+                                            <div>
+                                                <button type="submit" class="btn btn-primary w3-button w3-blue w3-border w3-border-white w3-round-large">
+                                                    Login
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <a href="{{ route('password.request') }}"><span class="linkreg">
+                                                    Forgot Your Password?</span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>

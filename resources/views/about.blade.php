@@ -1,9 +1,9 @@
 @extends('layouts.template')
 @section('content')
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>-->
 <style>
 /* Make the image fully responsive */
 .carousel-inner img {
@@ -88,16 +88,15 @@
 	</div>
 </div>
 <p></p>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 <div class="col-sm-12 down">
 	<p>&nbsp;</p>
 	<div class="container w3-center row">
 		<div class="col-sm-1"></div>
-		<div class="col-sm-2"><i class="fas fa-mobile font"></i><br>User friendly platform</div>
-		<div class="col-sm-2"><i class="fas fa-globe-africa font"></i><br>Secure and speedy deliveries</div>
-		<div class="col-sm-2"><i class="fas fa-credit-card font"></i><br>Easy payment system</div>
-		<div class="col-sm-2"><i class="fas fa-cog font"></i><br>Excellent customer support</div>
-		<div class="col-sm-2"><i class="fas fa-users font"></i><br>Trustworthy and reliable team</div>
+		<div class="col-sm-2"><i class="fa fa-mobile font font-response"></i><br>User friendly platform</div>
+		<div class="col-sm-2"><i class="fa fa-globe font"></i><br>Secure and speedy deliveries</div>
+		<div class="col-sm-2"><i class="fa fa-credit-card font"></i><br>Easy payment system</div>
+		<div class="col-sm-2"><i class="fa fa-cog font"></i><br>Excellent customer support</div>
+		<div class="col-sm-2"><i class="fa fa-users font"></i><br>Trustworthy and reliable team</div>
 		<div class="col-sm-12" style="height: 40px;"></div>
 	</div>
 </div>
