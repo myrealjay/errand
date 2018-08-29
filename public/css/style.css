@@ -1620,7 +1620,6 @@ h3.tittle-w3ls {
     padding:0 4%;
 }
 #sungal {
-    /*background-image: url('css/step1.png');*/
     background-color: #a57;
     min-width: 200px;
     min-height:200px
@@ -1860,5 +1859,24 @@ linkcl:hover {
 .fonticon {
     font-size: 200%;
 }
-
+.formbg {
+    background-color: #6f8fb9;
+    padding:10px;
+    border:7px solid #3B78E7;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+.formbg:hover {
+    border:7px solid #ffffff;
+}
+.linkreg{
+    background-color:#6f8fb9;
+    transition: 0.4s;
+}
+.linkreg:hover{
+    color:rgb(43, 83, 194);
+}
+.font-response:hover {
+    color:#cacaca;
+}
 /* -- //Responsive code -- */
