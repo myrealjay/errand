@@ -169,16 +169,21 @@
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
     <!-- Google Map plotting API -->
+    <script 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy4AGMeMLvNWcVq5qjPjIu5cBaQr8QECE&v=3.exp&libraries=places">
+    </script>
     <script>
       function initialize() {
         var input = document.getElementById('from_location');
         new google.maps.places.Autocomplete(input);
       }
-
+      //google.maps.event.addDomListener(window, 'load', initialize);
       function initialize2() {
         var input = document.getElementById('to_location');
         new google.maps.places.Autocomplete(input);
       }
+      //google.maps.event.addDomListener(window, 'load', initialize2);
+
 
       function initMap() {
         var directionsService = new google.maps.DirectionsService;
@@ -213,8 +218,8 @@
       google.maps.event.addDomListener(window, 'load', initialize);
       google.maps.event.addDomListener(window, 'load', initialize2);
     </script>
-    <script 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy4AGMeMLvNWcVq5qjPjIu5cBaQr8QECE&v=3.exp&libraries=places&&callback=initMap">
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy4AGMeMLvNWcVq5qjPjIu5cBaQr8QECE&v=3.exp&libraries=places&callback=initMap">
     </script>
 
   </body>
