@@ -5,6 +5,11 @@
   <p>YOUR PROFILE</p>
 	<div class="row">
    <div class="col-sm-6">
+    @if(session()->has('update'))
+      <div class="alert alert-success">
+        {{ session()->get('update') }}
+      </div>
+    @endif
      <img src="{{$user->picture}}" width="500">
    </div>
    <div class="col-sm-6">
@@ -22,6 +27,21 @@
     @else
     <p><b>Status : </b><b style="color:red">Unavailable for Service</b></p>
     @endif
-  </div>   
+  </div>
+  <div class="col-sm-6">
+    <p style="color:green"> Change Availability ?</p>
+    <form method="post" action="/driver/update">
+      {{csrf_field()}}
+      <select class="form-control" name="status">
+        <option value="0">Available For Hire</option>
+        <option value="1">Not Available for Hire</option>
+      </select>
+      <p></p>
+      <input type="submit" value="submit" class="btn btn-success">
+    </form>
+
+  </div> 
 </div>
+<br/> 
+<br/>
 @endsection

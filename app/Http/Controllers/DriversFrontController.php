@@ -69,4 +69,14 @@ class DriversFrontController extends Controller
         return view('driverboard.profile',compact('user'));
     }
 
+    public function updateAvailability(Request $request){
+        $update = $request->status;
+        $id = Session::get('driver_id');
+        $user = Driver::find($id);
+        $user->update(['status'=>$update]);
+        
+        Session::flash('update','You have Successfully changed your status...');
+        return redirect()->back();
+    }
+
 }

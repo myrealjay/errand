@@ -111,3 +111,5 @@ Route::get('/complete/{orderID}','DriversFrontController@updateTracker');
 Route::get('/driver/logs','DriversFrontController@logs');
 
 Route::get('/driver/profile','DriversFrontController@profile');
+
+Route::post('/driver/update','DriversFrontController@updateAvailability');
