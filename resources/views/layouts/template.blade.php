@@ -227,10 +227,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
                crossorigin="anonymous">
       </script> -->
+        <!--   $('#myForm').submit(function(){
+        $('#submitBtn').html('Sending...');
+    }); -->
       <script>
          jQuery(document).ready(function(){
             jQuery('#ajaxSubmit').click(function(e){
                e.preventDefault();
+               var button = $(this);
+        		button.val('Processing ...');
                $.ajaxSetup({
                   headers: {
                       'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
@@ -244,6 +249,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                      to_location: jQuery('#to_location').val()
                   },
                   success: function(result){
+                  	 button.val('Done');
                      jQuery('.alert').show();
                      jQuery('.alert').html(result.success);
                   }});

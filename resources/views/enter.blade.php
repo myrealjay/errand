@@ -55,7 +55,7 @@
 										<label class="contact-form-text">Delivery Point</label>
 										<input placeholder="Enter delivery adress " name="to_location" type="text" id="to_location" required="">
 									</div>
-									<input type="submit" class="btn btn-primary w3-button w3-blue w3-border w3-border-white w3-round-large" value="Calculate" id="ajaxSubmit">
+									<input type="submit" class="btn btn-primary w3-button w3-blue w3-border w3-border-white w3-round-large " value="Calculate" id="ajaxSubmit">
 								</form>
 							</div>
 					</div>
