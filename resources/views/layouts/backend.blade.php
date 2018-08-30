@@ -20,6 +20,9 @@
     <!-- Page level plugin CSS-->
     <link href="{{asset('vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet">
 
+    <!--brought in by dapo-->
+    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
+	
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
 
@@ -100,7 +103,7 @@
 
     </div>
     <!-- /#wrapper -->
-
+    
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fas fa-angle-up"></i>
@@ -124,6 +127,7 @@
         </div>
       </div>
     </div>
+    @include('layouts.footer')
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>

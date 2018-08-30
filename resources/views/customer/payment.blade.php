@@ -13,7 +13,8 @@
    
 @if($x == NULL)
     <form method="POST" action="{{ route('pay') }}" accept-charset="UTF-8" class="form-horizontal" role="form">
-        <div class="row" style="margin-bottom:40px;">
+        <div class="row bgground haph maxer">
+          <div class="col-md-2 col-md-offset-2"></div>
           <div class="col-md-8 col-md-offset-2">
             <p>
                 <div>
@@ -39,7 +40,7 @@
             <input type="hidden" name="_token" value="{{ csrf_token() }}"> 
 
             <p>
-              <button class="btn btn-success btn-lg btn-block" type="submit" value="Pay Now!">
+              <button class="btn btn-dark btn-lg" style="width:100%; margin:auto;" type="submit" value="Pay Now!">
               <i class="fa fa-plus-circle fa-lg"></i> Pay Now!
               </button>
             </p>
@@ -49,6 +50,7 @@
 @else
     <form method="POST" action="{{ route('paycode') }}" accept-charset="UTF-8" class="form-horizontal" role="form">
         <div class="row" style="margin-bottom:40px;">
+          <div class="col-md-2 col-md-offset-2"></div>
           <div class="col-md-8 col-md-offset-2">
             <p>
                 <div>
@@ -85,8 +87,12 @@
               </button>
             </p>
           </div>
+          <div class="col-md-2 col-md-offset-2"></div>
         </div>
     </form>
 @endif
+    <div class="bgground maxer advert">
+        <marquee>Adverts could come in in this section.</marquee>
+    </div>
 </div>
 @endsection
