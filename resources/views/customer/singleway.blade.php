@@ -23,6 +23,22 @@
                             </ul>
                         </div>
                         @endif
+                        <!-- <input id="origin-input"  type="text"
+                            placeholder="Enter an origin location">
+
+                        <input id="destination-input"  type="text"
+                            placeholder="Enter a destination location"> -->
+
+                        <div id="mode-selector" style="visibility:hidden;" >
+                          <input type="radio" name="type" id="changemode-walking">
+                          <label for="changemode-walking">Walking</label>
+
+                          <input type="radio" name="type" id="changemode-transit">
+                          <label for="changemode-transit">Transit</label>
+
+                          <input type="radio" name="type" id="changemode-driving" >
+                          <label for="changemode-driving">Driving</label>
+                        </div>
                         <form class="form-horizontal" method="POST" action="{{ url('/customer/request') }}">
                             {{ csrf_field() }}
                             <input id="customerid" type="hidden" class="form-control" name="customerid" value="{{\App\Customerinfo::find(Session::get('loggedin'))->id}}" required autofocus>
@@ -31,7 +47,7 @@
                                 <label for="from_location" class="col-md-4 control-label">From</label>
 
                                 <div class="col-md-12">
-                                    <input id="from_location" type="text" class="form-control" placeholder="Enter the address..." name="from_location" value="{{ old('from_location') }}" required autofocus>
+                                    <input id="origin-input" type="text" class="form-control" placeholder="Enter the address..." name="from_location" value="{{ old('from_location') }}" required autofocus>
 
                                     @if ($errors->has('from_location'))
                                     <span class="help-block">
@@ -45,7 +61,7 @@
                                 <label for="to_location" class="col-md-4 control-label">To</label>
 
                                 <div class="col-md-12">
-                                    <input id="to_location" type="text" class="form-control" name="to_location" placeholder="Enter the address..." value="{{ old('to_location') }}" required autofocus>
+                                    <input id="destination-input" type="text" class="form-control" name="to_location" placeholder="Enter the address..." value="{{ old('to_location') }}" required autofocus>
 
                                     @if ($errors->has('to_location'))
                                     <span class="help-block">

@@ -52,6 +52,8 @@ class CustomersFrontController extends Controller
 
     public function postRequest(Request $request){
         $total = $request->all();
+        $total['trip_type'] = $request->trip_type;
+        //dd($total['trip_type']);
         
         if ($request->from_location) {
         $address = $request->from_location; 
@@ -90,9 +92,9 @@ class CustomersFrontController extends Controller
 
         $price = 65 * $total['km'];
 
-        $total['price'] = ceil($price);
+        $total['price'] = ceil($price)*$total['trip_type'];
 
-        $total['price_kobo'] = ceil($price)*100; //Price in Kobo
+        $total['price_kobo'] = ceil($price)*100*$total['trip_type']; //Price in Kobo
 
         $total['orderID'] = "ERRAND".str_random(11);
 
