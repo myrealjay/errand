@@ -1934,4 +1934,17 @@ linkcl:hover {
     background-image: url('/images/payment.jpg');
     background-size: cover;
 }
+.reqimg{
+    background-image: url('/images/road.jpg');
+    background-size: cover;
+}
+.reqinn{
+    background-color: #eeeeee;
+    padding-bottom: 7vh;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 5px;
+}
+.spr {
+    min-height: 5vh;
+}
 /* -- //Responsive code -- */
