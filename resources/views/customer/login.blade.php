@@ -12,8 +12,8 @@
 <div class="col-md-12 lg-bg">
     <div class="col-sm-12 login-space"></div>
     <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-md-4 col-md-offset-2">
+        <div class="col-sm-3"></div>
+        <div class="col-md-6 col-md-offset-2">
             <div class="panel panel-primary">
                 <div class="panel-heading"></div>
                     <!--
