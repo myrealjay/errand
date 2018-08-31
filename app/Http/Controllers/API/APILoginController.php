@@ -45,7 +45,12 @@ class APILoginController extends AppBaseController
 			'status' => 'success',
 			'message' => 'Logged out Successfully.'
 		  ], 200);
-	}
+    }
+    
+    public function getUserDetails($id){
+        $user = Customerinfo::find($id);
+        return response()->json(compact('user'));
+    }
 
     public function postUpdate(Request $request,$id ){
 
