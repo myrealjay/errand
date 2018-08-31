@@ -249,7 +249,8 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy4AGMeMLvNWcVq5qjPjIu5cBaQr8QECE&libraries=places&callback=initMap"
         async defer></script>
-        @include('layouts.footer')
+        <div class="clearfix"> ghfuhdujh<br/> </div>
+        @include('layouts.footer') 
   </body>
 
 </html>
