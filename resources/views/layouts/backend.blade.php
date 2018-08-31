@@ -127,7 +127,7 @@
         </div>
       </div>
     </div>
-    @include('layouts.footer')
+    
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
@@ -249,7 +249,7 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy4AGMeMLvNWcVq5qjPjIu5cBaQr8QECE&libraries=places&callback=initMap"
         async defer></script>
-
+        @include('layouts.footer')
   </body>
 
 </html>
