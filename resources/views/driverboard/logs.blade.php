@@ -4,7 +4,7 @@
 <div class="container">
 	<p style="text-align:center"> DRIVER LOGS </p>
   @if($tracker->count() > 0)      
-  <table class="table">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <th>#</th>
