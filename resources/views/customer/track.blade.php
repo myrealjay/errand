@@ -27,11 +27,13 @@
         <td>{{$log->created_at->diffForHumans()}}</td>
        </tr>
       @endforeach
-    @else
+    
        
     </tbody>
   </table>
-  <p style="text-align:center">You currently have no errand...</p>
-    @endif
+  
+  @else
+    <p style="text-align:center">You currently have no errand...</p>
+  @endif
 </div>
 @endsection
