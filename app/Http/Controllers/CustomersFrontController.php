@@ -89,6 +89,7 @@ class CustomersFrontController extends Controller
         
         $total['km'] = $this->distance($lat1, $lon1, $lat, $lon);
         //$total['km'] = $this->getDistance($lat, $lon,$lat1, $lon1);
+        //dd($total['km']);
 
         $price = 65 * $total['km'];
 

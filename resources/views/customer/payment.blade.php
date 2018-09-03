@@ -92,7 +92,7 @@
     </form>
 @endif
     <div class="bgground maxer advert">
-        <marquee>Adverts could come in in this section.</marquee>
+        <marquee>Make Payments easily and Have your packages delivered quickly.</marquee>
     </div>
 </div>
 @endsection
