@@ -27,10 +27,11 @@
         <td> &#x20a6; {{number_format($log->price)}}</td>
        </tr>
       @endforeach
-    @else
+    
        
     </tbody>
   </table>
+    @else
   <p style="text-align:center">You have no logs yet</p>
     @endif
   </div>
