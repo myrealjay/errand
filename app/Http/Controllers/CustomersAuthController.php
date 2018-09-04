@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Customerinfo;
+use App\User;
 use Session;
 use Hash;
 
@@ -59,8 +60,10 @@ class CustomersAuthController extends Controller
         $details = $request->all();
         //dd($details);
         $details['password'] = bcrypt($request->password);
+        $details['role'] = 2; //Customer's role
        
         Customerinfo::create($details);
+        User::create($details);  //Update
         $user = Customerinfo::where('email',$request->email)->get()->first();
         $loggedIn = $user->id;
         Session::put('loggedin',$loggedIn);

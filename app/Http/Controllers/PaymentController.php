@@ -38,6 +38,8 @@ class PaymentController extends Controller
         if($paymentDetails['status']){
         if (is_null($users->authorization_code)) {
             $inputs = $paymentDetails['data']['metadata'];
+            $orderID = $paymentDetails['data']['metadata']['orderID'];
+            //dd($orderID);
             $input = $paymentDetails['data']['authorization']['authorization_code'];
             //dd($input);
             $inputs['status'] = 'Successful';
@@ -70,7 +72,7 @@ class PaymentController extends Controller
             $driverUpdate = \App\Models\Driver::find($random);
             $driverUpdate->update($input);
 
-            $tracking = ['orderID'=>$request->orderID,'status'=>1,'driverID'=>$random,'customerID'=>Session::get('loggedin')];
+            $tracking = ['orderID'=>$orderID,'status'=>1,'driverID'=>$random,'customerID'=>Session::get('loggedin')];
             \App\ErrandTracker::create($tracking);
             CustomerRecord::create($inputs);
              }else{
@@ -107,7 +109,7 @@ class PaymentController extends Controller
             $input = ['status' => 1];
             $driverUpdate = \App\Models\Driver::find($random);
             $driverUpdate->update($input);
-
+            dd($request->orderID);
             $tracking = ['orderID'=>$request->orderID,'status'=>1,'driverID'=>$random,'customerID'=>Session::get('loggedin')];
             \App\ErrandTracker::create($tracking);
             CustomerRecord::create($inputs);
@@ -150,6 +152,7 @@ class PaymentController extends Controller
         //dd($response);
         if ($response['status']) {
             $inputs = $request->all();
+            //dd($inputs);
             $inputs['status'] = 'Successful';
             $inputs['customerID'] = Session::get('loggedin');
             //CustomerRecord::create($inputs);
