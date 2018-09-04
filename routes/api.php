@@ -17,6 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('getdriver', 'APIPaymentController@getdriver');
 Route::post('register', 'APIRegisterController@register');
 Route::post('login', 'APILoginController@login');
 Route::group(['middleware' => ['jwt.auth']], function() {
@@ -24,4 +25,6 @@ Route::group(['middleware' => ['jwt.auth']], function() {
     Route::get('test', 'APIRegisterController@test'); //test
     Route::get('getuserinfo/{id}', 'APILoginController@getUserDetails');//get user info
     Route::put('customer/{id}', 'APILoginController@postUpdate'); //Update Customer info
+    Route::post('getauthcode/{id}', 'APIPaymentController@getauthcode');
+    Route::get('checkauthcode/{id}', 'APIPaymentController@checkauthcode');
 });
