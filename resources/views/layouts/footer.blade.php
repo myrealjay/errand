@@ -1,21 +1,11 @@
 
-<!DOCTYPE html>
-<html lang="zxx">
+	
+<link href="{{ URL::asset('css/bootstrap.css') }}" type="text/css" rel="stylesheet" media="all">
 
-<head>
-	
-	
-	 <link href="{{ URL::asset('css/bootstrap.css') }}" type="text/css" rel="stylesheet" media="all">
-	
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
 	
 
-</head>
-
-<body>
-
-	<!-- footer -->
 <footer>
 	<section class="footer py-md-5">
 		<div class="container py-4 mt-2">
@@ -92,9 +82,3 @@
 	<p class="copy-right py-3">&copy 2018 Errand pro Limited</p>
 	<!-- //footer -->
 </footer>
-
-
-
-</body>
-
-</html>

@@ -19,11 +19,11 @@
             <p>
                 <div>
                     <h1> PAYMENT INFO </h1>
-				    <P>From : {{$total->from_location}}</P>
-				    <P>To : {{$total->to_location}}</P>
-				    <p>Description : {{$total->description}}</P>
-                    <p>Price : &#x20a6; {{$total->price}}</p>
-                    <p>Order ID : {{$total->orderID}}</p>
+				    <P>From : <b>{{$total->from_location}}</b></P>
+				    <P>To : <b>{{$total->to_location}}</b></P>
+				    <p>Description : <b>{{$total->description}}</b></P>
+                    <p>Price : &#x20a6; <b>{{$total->price}}</b></p>
+                    <p>Order ID : <b>{{$total->orderID}}</b></p>
                 </div>
             </p>
             <input type="hidden" name="email" value="{{\App\Customerinfo::find(Session::get('loggedin'))->email}}">
@@ -92,7 +92,7 @@
     </form>
 @endif
     <div class="bgground maxer advert">
-        <marquee>Adverts could come in in this section.</marquee>
+        <marquee>Make Payments easily and Have your packages delivered quickly.</marquee>
     </div>
 </div>
 @endsection
