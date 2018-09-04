@@ -82,8 +82,6 @@
                                             <div class="banner-top banner-top1">
                                             </div>
                                         </li>
-
-
                                         <li>
                                             <div class="banner-top banner-top2">
                                             </div>
