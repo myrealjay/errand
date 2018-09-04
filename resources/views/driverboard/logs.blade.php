@@ -32,11 +32,15 @@
         <td>{{$log->created_at->diffForHumans()}}</td>
        </tr>
       @endforeach
-    @else
        
     </tbody>
   </table>
+    @else
+
   <p style="text-align:center">You currently have no logs...</p>
+  <div class="idlediv">
+    <img src="{{asset ('/images/sand-timer.png') }}" width="100%" height="width" class="daps-rotate" >
+  </div>
   @endif   
 </div>
 @endsection

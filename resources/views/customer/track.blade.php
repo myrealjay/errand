@@ -35,6 +35,9 @@
   
   @else
     <p style="text-align:center">You currently have no errand...</p>
+    <div class="idlediv">
+      <img src="{{asset ('/images/sand-timer.png') }}" width="100%" height="width" class="daps-rotate" >
+    </div>
   @endif
 </div>
 @endsection
