@@ -109,7 +109,7 @@ class PaymentController extends Controller
             $input = ['status' => 1];
             $driverUpdate = \App\Models\Driver::find($random);
             $driverUpdate->update($input);
-            dd($request->orderID);
+            //dd($request->orderID);
             $tracking = ['orderID'=>$request->orderID,'status'=>1,'driverID'=>$random,'customerID'=>Session::get('loggedin')];
             \App\ErrandTracker::create($tracking);
             CustomerRecord::create($inputs);
