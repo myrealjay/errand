@@ -61,6 +61,9 @@
                             <li class="nav-item  mr-3">
                                 <a class="nav-link" href="{{url('customer/register')}}">Register</a>
                             </li>
+                            <li class="nav-item  mr-3">
+                                <a class="btn btn-large btn-success" href="{{url('driver/register')}}"><b>Become a Driver</b></a>
+                            </li>
                         </ul>
                     </div>
 

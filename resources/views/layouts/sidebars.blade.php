@@ -9,43 +9,43 @@
           <!-- Breadcrumbs-->
           <ol class="breadcrumb" style="display:{{ Request::is('dashboard*') ? '' : 'none' }}">
             <li class="breadcrumb-item">
-              <a href="{{url('/dashboard')}}">Dashboard</a>
+              <a class="w3-text-black" href="{{url('/dashboard')}}">Dashboard</a>
             </li>
             <li class="breadcrumb-item active">Overview</li>
           </ol>
           <ol class="breadcrumb" style="display:{{ Request::is('customer/request*') ? '' : 'none' }}">
             <li class="breadcrumb-item">
-              <a href="{{url('/customer/request')}}">Make a Request</a>
+              <a class="w3-text-black" href="{{url('/customer/request')}}">Make a Request</a>
             </li>
             <li class="breadcrumb-item active">Overview</li>
           </ol>
           <ol class="breadcrumb" style="display:{{ Request::is('customer/track*') ? '' : 'none' }}">
             <li class="breadcrumb-item">
-              <a href="{{url('/customer/track')}}">Track Your Requests</a>
+              <a class="w3-text-black" href="{{url('/customer/track')}}">Track Your Requests</a>
             </li>
             <li class="breadcrumb-item active">Overview</li>
           </ol>
           <ol class="breadcrumb" style="display:{{ Request::is('customer/logs*') ? '' : 'none' }}">
             <li class="breadcrumb-item">
-              <a href="{{url('/customer/logs')}}"> Errand Logs</a>
+              <a class="w3-text-black" href="{{url('/customer/logs')}}"> Errand Logs</a>
             </li>
             <li class="breadcrumb-item active">Overview</li>
           </ol>
           <ol class="breadcrumb" style="display:{{ Request::is('customer/update*') ? '' : 'none' }}">
             <li class="breadcrumb-item">
-              <a href="{{url('/customer/update')}}"> Update Your Profile </a>
+              <a class="w3-text-black" href="{{url('/customer/update')}}"> Update Your Profile </a>
             </li>
             <li class="breadcrumb-item active">Overview</li>
           </ol>
           <ol class="breadcrumb" style="display:{{ Request::is('singleway*') ? '' : 'none' }}">
             <li class="breadcrumb-item">
-              <a href="{{url('/singleway')}}"> Single-way Request </a>
+              <a class="w3-text-black" href="{{url('/singleway')}}"> Single-way Request </a>
             </li>
             <li class="breadcrumb-item active">Overview</li>
           </ol>
           <ol class="breadcrumb" style="display:{{ Request::is('multiway*') ? '' : 'none' }}">
             <li class="breadcrumb-item">
-              <a href="{{url('/multiway')}}"> Multi-way Request </a>
+              <a class="w3-text-black" href="{{url('/multiway')}}"> Multi-way Request </a>
             </li>
             <li class="breadcrumb-item active">Overview</li>
           </ol>

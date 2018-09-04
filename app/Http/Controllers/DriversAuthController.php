@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Driver;
+use App\DriversForm;
 use Session;
 use Hash;
 
@@ -45,6 +46,23 @@ class DriversAuthController extends Controller
 
     public function getLogin(){
     	return view ('driverboard.login');
+    }
+
+    public function postRegister(Request $request){
+      $this->validate($request,[
+           'f_name' => 'required',
+           'l_name' => 'required',
+           'email' => 'required',
+           'phone_no' => 'required|numeric',
+           'address' => 'required',
+           'd_o_b' => 'required'
+      ]);
+
+        $input = $request->all();
+        //dd($x);
+        DriversForm::create($input);
+      Session::flash('message','Your request has been received. We will get back to you.');
+      return redirect()->back();
     }
     
 }
