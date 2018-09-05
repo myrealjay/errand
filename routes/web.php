@@ -98,6 +98,8 @@ Route::post('/driver/login', 'DriversAuthController@postLogin');
 
 Route::get('/driver/register', 'DriversAuthController@getRegister');
 
+Route::post('/driver/register', 'DriversAuthController@postRegister');
+
 Route::post('/driver-logout','DriversFrontController@logout')->name('driver-logout');
 
 Route::get('/driver-logout','DriversFrontController@logout')->name('driver-logout');

@@ -39,8 +39,9 @@
     {!! Form::label('role', 'Role:') !!}
     <select name="role" class="form-control">
      <option value="" disabled selected >User Role</option>
-     <option value="1">Super Admin</option>
      <option value="0">Driver</option>
+     <option value="1">Super Admin</option>
+     <option value="2">Customer</option>
     </select>
     <!-- {!! Form::text('role', null, ['class' => 'form-control']) !!} -->
 </div>

@@ -23,6 +23,9 @@
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
 
+    <!--Dapo brought in styles.css-->
+    <link rel="stylesheet" href="{{asset ('css/style.css') }}">
+
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 
   </head>
@@ -164,6 +167,7 @@
 
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+    @include('layouts.footer')
   </body>
 
 </html>

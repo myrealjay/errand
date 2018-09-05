@@ -20,6 +20,8 @@
             <!-- <td>{!! $user->password !!}</td> -->
             <td>@if($user->role == 1)
             <p> Admin</p>
+            @elseif($user->role == 2)
+            <p>Customer</p>
             @else
             <p>Driver</p>
             @endif</td>
