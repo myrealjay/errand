@@ -83,6 +83,8 @@ Route::resource('customerinfos', 'CustomerinfoController');
 
 Route::resource('drivers', 'DriverController');
 
+Route::get('driver-request','DriverController@getRequest');
+
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay'); //Paystack payment
 
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback'); //Paystack Payment

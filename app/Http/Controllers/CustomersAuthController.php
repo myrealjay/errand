@@ -72,6 +72,16 @@ class CustomersAuthController extends Controller
     }
 
     public function postRequest(Request $request){
+        $validator = \Validator::make($request->all(), [
+            'from_location' => 'required',
+            'to_location' => 'required',
+        ]);
+        
+        if ($validator->fails())
+        {
+            return response()->json(['errors'=>$validator->errors()->all()]);
+        }
+
         $total = $request->all();
         //dd($total);
         if ($request->from_location) {

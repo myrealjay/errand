@@ -9,4 +9,7 @@
 <li class="{{ Request::is('drivers*') ? 'active' : '' }}">
     <a href="{!! route('drivers.index') !!}"><i class="fa fa-database"></i><span>Drivers</span></a>
 </li>
+<li class="{{ Request::is('driver-request*') ? 'active' : '' }}">
+    <a href="{!! url('driver-request') !!}"><i class="fa fa-paperclip"></i><span>Become a Driver Request</span></a>
+</li>
 

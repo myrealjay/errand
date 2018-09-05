@@ -190,4 +190,9 @@ class DriverController extends AppBaseController
 
         return redirect(route('drivers.index'));
     }
+
+    public function getRequest()
+    {
+        return view('drivers.driver-request');
+    }
 }

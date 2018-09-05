@@ -93,7 +93,7 @@
 							<li><a href="{{ url('/about') }}">About Us</a></li>
 							<li><a href="{{ url('/terms') }}">Terms of Service</a></li>
 							<li><a href="{{ url('/delivery') }}">Delivery Policy</a></li>
-							<li><a href="{{ url('/riferregistration') }}">Become a Rider</a></li>
+							<li><a href="{{ url('/driver/register') }}">Become a Rider</a></li>
 							<li><a href="{{ url('/blog') }}">Blog</a></li>
 							<li><a href="{{ url('/faq') }}">FAQs</a></li>
 							<li><a href="{{ url('/driver/login') }}">Driver's Login</a></li>
@@ -251,9 +251,14 @@
                      to_location: jQuery('#to_location').val()
                   },
                   success: function(result){
+                  	jQuery.each(result.errors, function(key, value){
+                  			jQuery('.alert').show();
+                  			jQuery('.alert').append('<li>'+value+'</li>');
+                  		});
+
                   	 button.val('Done');
-                     jQuery('.alert').show();
-                     jQuery('.alert').html(result.success);
+                     jQuery('.alert ').show();
+                     jQuery('.alert ').html(result.success);
                   }});
                });
             });

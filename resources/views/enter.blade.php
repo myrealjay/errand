@@ -45,6 +45,8 @@
                         		</div>
                         		@endif
                         		<div class="alert alert-info" style="display:none" value="&#x20a6;"></div>
+                        		<!-- <div class="alert-danger" style="display:none">
+                        		</div> -->
 								<form action="{{url('/estimate')}}" method="post" class="banner_form">
 									{{csrf_field()}}
 									<div class="sec-left">
