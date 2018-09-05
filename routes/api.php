@@ -27,4 +27,7 @@ Route::group(['middleware' => ['jwt.auth']], function() {
     Route::put('customer/{id}', 'APILoginController@postUpdate'); //Update Customer info
     Route::post('getauthcode/{id}', 'APIPaymentController@getauthcode');
     Route::get('checkauthcode/{id}', 'APIPaymentController@checkauthcode');
+    Route::post('saverecord/{id}', 'APIPaymentController@saverecord');
+    Route::get('track/{id}', 'APIcustomerController@track');
+    Route::get('getDetails/{id}', 'APIcustomerController@getDetails');
 });

@@ -5,9 +5,48 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Customerinfo;
 use App\Models\Driver;
+use App\ErrandTracker;
+use App\CustomerRecord;
 
 class APIPaymentController extends Controller
 {
+    public function saverecord(Request $request,$id){
+        $from_location=$request->from_location;
+        $to_location=$request->to_location;
+        $contact_person=$request->contact_person;
+        $contact_phone=$request->contact_phone;
+        $description=$request->description;
+        $trip_type=$request->trip_type;
+        $price=$request->price;
+        $status='Successful';
+        $orderID="ERRAND".str_random(11);
+        $customerID=$id;
+        $driverID=$request->driverID;
+
+
+        $inputs=[
+            'from_location'=>$from_location,
+            'to_location'=>$to_location,
+            'contact_person'=>$contact_person,
+            'contact_phone'=>$contact_phone,
+            'description'=>$description,
+            'trip_type'=>$trip_type,
+            'price'=>$price,
+            'status'=>$status,
+            'orderID'=>$orderID,
+            'customerID'=>$customerID
+        ];
+
+        //save customer record
+        CustomerRecord::create($inputs);
+
+        //save tracking records
+        $tracking = ['orderID'=>$orderID,'status'=>1,'driverID'=>$driverID,'customerID'=>$customerID];
+        ErrandTracker::create($tracking);
+
+        return response()->json(['message'=>'Saved']);
+
+    }
 
     public function getdriver(){
         $driver = Driver::where('status',0)->inRandomOrder()->get()->first();
@@ -60,72 +99,6 @@ class APIPaymentController extends Controller
         else{
             return response()->json(['authcode'=>'not found']);
         }
-        
-    }
-
-    public function payViaCode(Request $request){
-
-        $headers = [
-            'Content-Type' => 'application/json',
-            'Authorization' => 'Bearer sk_test_bfbb2717cce37f44e52adc8779fd6a442e7dbf9d',
-        ];
-
-        $client = new \GuzzleHttp\Client([
-            'headers' => $headers
-        ]);
-
-        $auth_code = \App\Customerinfo::find(Session::get('loggedin'))->authorization_code;
-        $body = array("authorization_code" => $auth_code,
-         "email" => $request->email,
-          "amount" => $request->amount);
-
-        $r = $client->request('POST', 'https://api.paystack.co/transaction/charge_authorization', [
-            'body' => json_encode($body)
-        ]);
-        $response = $r->getBody()->getContents();
-        $response = json_decode($response, true);
-        //dd($response);
-        if ($response['status']) {
-            $inputs = $request->all();
-            $inputs['status'] = 'Successful';
-            $inputs['customerID'] = Session::get('loggedin');
-            //CustomerRecord::create($inputs);
-
-            //Getting the Driver
-
-            $select = \App\Models\Driver::where('status',0)->get();
-            //dd($select);
-            if($select){
-	            $pick = [];
-	            foreach ($select as $key ) {
-	                array_push($pick, $key->id);
-	            }
-	            //dd($pick);
-	            if ($pick == null) {
-	            	return redirect('/customer/request')->with('message','All drivers are engaged at the moment....Pls try again');
-	            }
-	            $index = array_rand($pick,1);
-	            $random = $pick[$index];
-
-	            $driver = \App\Models\Driver::where('id',$random)->get();
-	            // Send an SMS to the Biker to check his App.
-
-	            //dd($driver);
-	            $input = ['status' => 1];
-	            $driverUpdate = \App\Models\Driver::find($random);
-	            $driverUpdate->update($input);
-
-	            $tracking = ['orderID'=>$request->orderID,'status'=>1,'driverID'=>$random,'customerID'=>Session::get('loggedin')];
-	            \App\ErrandTracker::create($tracking);
-	            CustomerRecord::create($inputs);
-            }else{
-                return redirect('/customer/request')->with('message','All drivers are engaged at the monent...Pls try again');
-            }    
-
-           return redirect('/customer/request')->with('message','Successfully paid...');
-        }else{
-            return redirect('/customer/request')->with('message','Invalid Input... Try Again');
-        } 
         
     }
 
