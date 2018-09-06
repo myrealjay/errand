@@ -85,6 +85,14 @@ Route::resource('drivers', 'DriverController');
 
 Route::get('driver-request','DriverController@getRequest');
 
+Route::get('driver-update/{id}','DriverController@editPostRequest');
+
+Route::get('driver-show/{id}','DriverController@showDriverRequest');
+
+Route::post('driver-update/{id}','DriverController@updatePostRequest');
+
+Route::post('driver-delete/{id}','DriverController@destroyPostRequest');
+
 Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay'); //Paystack payment
 
 Route::get('/payment/callback', 'PaymentController@handleGatewayCallback'); //Paystack Payment
