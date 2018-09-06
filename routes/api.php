@@ -29,5 +29,5 @@ Route::group(['middleware' => ['jwt.auth']], function() {
     Route::get('checkauthcode/{id}', 'APIPaymentController@checkauthcode');
     Route::post('saverecord/{id}', 'APIPaymentController@saverecord');
     Route::get('track/{id}', 'APIcustomerController@track');
-    Route::get('getDetails/{id}', 'APIcustomerController@getDetails');
+    Route::get('getDetails/{id}', 'APIcustomerController@getDetails');//getting transactikondetails
 });
