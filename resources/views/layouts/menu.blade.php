@@ -9,4 +9,16 @@
 <li class="{{ Request::is('drivers*') ? 'active' : '' }}">
     <a href="{!! route('drivers.index') !!}"><i class="fa fa-database"></i><span>Drivers</span></a>
 </li>
+<!-- <li class="{{ Request::is('driver-request*') ? 'active' : '' }}">
+    <a href="{!! url('driver-request') !!}"><i class="fa fa-paperclip"></i><span>Become a Driver Request</span></a>
+</li> -->
+@if(count(App\DriversForm::where('status',0)->get()) > 0)
+<li>
+    <a href="{!! url('driver-request') !!}"><i class="fa fa-paperclip"></i>Notifications <span class="badge" style="border-radius:50%;background-color:red;">{{ count(App\DriversForm::where('status',0)->get())}}</span></a>
+</li>
+@else
+<li>
+    <a href="{!! url('driver-request') !!}"><i class="fa fa-paperclip"></i><span>Become a Driver Request</span></a>
+</li>    
+@endif
 

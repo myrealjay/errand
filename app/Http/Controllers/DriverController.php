@@ -190,4 +190,73 @@ class DriverController extends AppBaseController
 
         return redirect(route('drivers.index'));
     }
+
+    public function getRequest()
+    {
+        return view('drivers.driver-request');
+    }
+
+    public function editPostRequest($id)
+    {
+        $driver = \App\DriversForm::find($id);
+
+        if (empty($driver)) {
+            Flash::error('Driver not found');
+
+            return redirect(route('drivers.index'));
+        }
+
+        return view('drivers.driver-update')->with('driver', $driver);
+    }
+
+    public function updatePostRequest(Request $request, $id)
+    {
+        $total = $request->all();
+        //dd($id);
+        $driver = \App\DriversForm::find($id);
+        $driver->update($total);
+
+
+        if (empty($driver)) {
+            Flash::error('Driver not found');
+
+            return redirect(route('drivers.index'));
+        }
+
+        Flash::success('Driver request updated successfully.');
+        return redirect(url('driver-request'));
+        //return view('drivers.driver-update')->with('driver', $driver);
+    }
+
+
+    public function destroyPostRequest($id)
+    {
+        $driver = \App\DriversForm::find($id);
+        //dd($driver);
+
+        if (empty($driver)) {
+            Flash::error('Driver not found');
+
+            return redirect(route('drivers.index'));
+        }
+
+        $driver->delete();
+
+        Flash::success('Driver request deleted successfully.');
+
+        return redirect(url('driver-request'));
+    }
+
+    public function showDriverRequest($id)
+    {
+        $driver = \App\DriversForm::find($id);
+
+        if (empty($driver)) {
+            Flash::error('Driver not found');
+
+            return redirect(route('drivers.index'));
+        }
+
+        return view('drivers.driver-show')->with('driver', $driver);
+    }
 }
